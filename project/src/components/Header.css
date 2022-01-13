@@ -1,0 +1,15 @@
+.title {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 10px 0;
+}
+.title h1 {
+    font-family: 'Indie Flower', cursive;
+    font-size: calc(18px + 1.6vw);
+}
+#emoji {
+    padding: 0 10px;
+    font-size: calc(16px + 1.2vw);
+    line-height: 3.1;
+}
