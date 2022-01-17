@@ -12,7 +12,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 60vh;
     padding: 10px 0;
+    background-image: url('../components/img/streak.svg');
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .title {
     display: inline-flex;
@@ -29,7 +33,7 @@
 
 /* Body */
 .container {
-    height: 300vh;
+    height: 200vh;
     width: 100%;
 }
 .page {
