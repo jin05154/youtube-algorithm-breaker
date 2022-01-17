@@ -1,5 +1,5 @@
 import React from 'react';
-import './Body.css';
+import './MainPage.css';
 
 function Body() {
     return (
