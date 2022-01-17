@@ -1,15 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300&display=swap');
-.title {
+.header {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 10px 0;
+}
+.title {
+    display: inline-flex;
 }
 .title h1 {
     font-family: 'Indie Flower', cursive;
     font-size: calc(38px + 1.0vw);
     margin-block-start: 0.3em;
     margin-block-end: 0.22em;
+}
+.title h1:nth-child(odd) {
+    color: #CD5C5C;
 }
 .detail {
     font-family: 'IBM Plex Sans KR', sans-serif;
