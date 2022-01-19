@@ -55,6 +55,7 @@
 }
 /*
 말풍선 나타나는 애니메이션 손 좀 봐야할듯
+animation: 0.8s ease-in-out 4s smooth-appear;
 */
 @keyframes smooth-appear {
     from {
@@ -85,7 +86,6 @@
 .detail p {
     margin-block-start: 0.3em;
     margin-block-end: 0.3em;
-    animation: 0.8s ease-in-out 4s smooth-appear;
 }
 
 /* Footer */

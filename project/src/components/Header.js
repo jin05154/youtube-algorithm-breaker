@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './style.css';
 
+import FadeIn from 'react-fade-in';
 import { ReactComponent as SendOne } from './img/send_1.svg';
 import { ReactComponent as SendTwo } from './img/send_2.svg';
 import { ReactComponent as SendThree } from './img/send_3.svg';
@@ -27,10 +28,12 @@ const Chats = () => {
     }, [])
     return (
         <>
-            <div id='bubble-1'>{showOne && <SendOne />}</div>
-            <div id='bubble-2'>{showTwo && <SendTwo />}</div>
-            <div id='bubble-3'>{showThree && <ReplyOne />}</div>
-            <div id='bubble-4'>{showFour && <SendThree />}</div>
+            <FadeIn>
+                <div id='bubble-1'><SendOne /></div>
+                <div id='bubble-2'><SendTwo /></div>
+                <div id='bubble-3'><ReplyOne /></div>
+                <div id='bubble-4'><SendThree /></div>
+            </FadeIn>
         </>
     );
 }
@@ -48,7 +51,10 @@ const Header = () => {
                     <h1>reaker</h1>
                 </div>
                 <div className='chat'>
-                    <Chats />
+                    <FadeIn><div id='bubble-1'><SendOne /></div></FadeIn>
+                    <FadeIn delay={550}><div id='bubble-2'><SendTwo /></div></FadeIn>
+                    <FadeIn delay={1050}><div id='bubble-3'><ReplyOne /></div></FadeIn>
+                    <FadeIn delay={1550}><div id='bubble-4'><SendThree /></div></FadeIn>
                 </div>
             </div>
         </>
