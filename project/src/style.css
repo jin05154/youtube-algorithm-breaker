@@ -96,7 +96,7 @@ animation: 0.8s ease-in-out 4s smooth-appear;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 80vh;
     width: 100%;
 }
 .top-content {
@@ -108,11 +108,15 @@ animation: 0.8s ease-in-out 4s smooth-appear;
     display: inherit;
     flex-direction: column;
     align-items: center;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 .detail p {
     margin-block-start: 0.3em;
     margin-block-end: 0.3em;
+    font-weight: 300;
+}
+.detail div {
+    margin: 28px 0 15px;
 }
 
 /* Footer */

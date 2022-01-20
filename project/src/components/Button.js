@@ -29,6 +29,7 @@ const StyledButton = styled.button`
     margin: 5px;
     cursor: pointer;
     font-size: 23px;
+    font-weight: bold;
     &:hover {
         background-color: ${(props) => theme[props.theme].hover};
     }
