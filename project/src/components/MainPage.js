@@ -1,7 +1,6 @@
 import React from 'react';
-import './style.css';
+import '../style.css';
 
-import styled from 'styled-components';
 import ChatIntro from './ChatIntro';
 
 const MainPage = () => {

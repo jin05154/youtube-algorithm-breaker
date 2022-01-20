@@ -15,7 +15,7 @@
     align-items: center;
     height: 57vh;
     padding: 10px 0 0;
-    background-image: url('../components/img/streak.svg');
+    background-image: url('./images/streak.svg');
     background-repeat: no-repeat;
     background-position: center;
 }
