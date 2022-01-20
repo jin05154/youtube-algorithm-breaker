@@ -1,4 +1,6 @@
 import React from 'react';
+import './style.css'
+
 import Header from './components/Header';
 import Body from './components/MainPage';
 import Footer from './components/Footer';

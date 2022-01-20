@@ -1,5 +1,4 @@
 import React from "react";
-import '../style.css';
 
 import FadeIn from 'react-fade-in';
 import { ReactComponent as SendOne } from '../images/send_1.svg';
