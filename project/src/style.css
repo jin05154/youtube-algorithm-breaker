@@ -17,7 +17,7 @@ code {
     --black: #000000;
     --header-title-red: #CD5C5C;
     --title-shadow: #CCCCCC;
-    --footer-background: #21243D;
+    --footer-text: #21243D;
     --footer-copyrights: #8695A4;
     --button-default-color-1: #EA1D5D;
     --button-hover-color-1: #ad1457;
@@ -119,10 +119,9 @@ code {
 /* Footer */
 .footer {
     /* height: 100px; */
-    background-color: var(--footer-background);
     font-family: 'IBM Plex Sans KR', sans-serif;
     font-size: calc(11px + 0.2vw);
-    color: var(--white);
+    color: var(--footer-text);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -136,7 +135,7 @@ code {
     display: inline-flex;
 }
 .email a {
-    color: var(--white);
+    color: var(--footer-text);
 }
 .email p:nth-child(2) {
     text-decoration: underline;
