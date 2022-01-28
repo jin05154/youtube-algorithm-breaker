@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import "./style.css";
+import "./app.css";
 
 import Main from "./routes/HomePage";
 import SelectMode from "./routes/SelectMode";
