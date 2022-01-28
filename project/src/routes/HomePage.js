@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 
 import Layout from "../components/DefaultLayout";
@@ -6,7 +5,7 @@ import ChatIntro from "../components/ChatIntro";
 import Button from "../components/Button";
 import LinkedText from "../components/LinkedText";
 
-export default function MainPage() {
+export default function HomePage() {
   const navigate = useNavigate();
   const onClickMainBtn = () => {
     navigate("/mode");

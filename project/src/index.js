@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import App from "./App";
 
-import SelectMode from "./pages/SelectModePage";
+import SelectMode from "./routes/SelectMode";
 
 ReactDOM.render(
   <BrowserRouter>

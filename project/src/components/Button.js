@@ -25,7 +25,6 @@ const StyledButton = styled.button`
     background-color: ${(props) => theme[props.theme].default};
     border: none;
     border-radius: 6px;
-    padding: 10px;
     margin: 5px;
     cursor: pointer;
     font-size: 23px;
