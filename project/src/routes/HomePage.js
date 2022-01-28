@@ -8,7 +8,7 @@ import LinkedText from "../components/LinkedText";
 export default function HomePage() {
   const navigate = useNavigate();
   const onClickMainBtn = () => {
-    navigate("/mode");
+    navigate("/recommend");
   };
   return (
     <Layout>

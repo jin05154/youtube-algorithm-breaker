@@ -9,7 +9,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Main />} />
-      <Route path="mode" element={<SelectMode />} />
+      <Route path="recommend" element={<SelectMode />} />
     </Routes>
   );
 }
