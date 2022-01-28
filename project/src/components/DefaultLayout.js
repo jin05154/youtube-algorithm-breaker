@@ -3,12 +3,12 @@ import styled from "styled-components";
 import Footer from "./Footer";
 import Header from "./Header";
 
-const DefaultLayout = ({ body }) => {
+const DefaultLayout = ({ children }) => {
   return (
     <>
       <div className="App">
         <Header />
-        <Body>{body}</Body>
+        <Body>{children}</Body>
         <Footer />
       </div>
     </>
