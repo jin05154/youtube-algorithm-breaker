@@ -31,6 +31,7 @@ code {
     background-image: url('./images/streak.svg');
     background-repeat: no-repeat;
     background-position: 50% 10%;
+    height: 100%;
 }
 
 /* Header */
@@ -39,15 +40,15 @@ code {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    height: 160px;
-    padding: 10px 0 0;
+    height: 20%;
+    padding: 100px 0 0;
 }
 .mobile-header {
     display: none;
 }
 @media (max-width: 640px) {
     .header {
-        height: 230px;
+        padding: 50px 0 4px;
     }
     .pc-header {
         display: none;
@@ -104,13 +105,19 @@ code {
 }
 
 /* Body */
+.default-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+    padding: 0 0 10px;
+}
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: calc(100% - 250px);
-    width: 100%;
-    padding: 10px 0 50px;
+    padding: 10px 0;
 }
 .top-content {
     padding: 14px 0;
@@ -150,9 +157,9 @@ code {
 
 /* Footer */
 .footer {
-    /* height: 100px; */
+    height: 10%;
     font-family: 'IBM Plex Sans KR', sans-serif;
-    font-size: calc(11px + 0.2vw);
+    font-size: calc(11px + 0.17vw);
     color: var(--footer-text);
     display: flex;
     flex-direction: column;
