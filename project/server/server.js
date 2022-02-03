@@ -12,8 +12,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
-app.get('/data', (req, res) => {
-    db.query(`SELECT * FROM areas`, (error, results) => {
+app.get('/', (req, res) => {
+    db.query(`SELECT * FROM videos`, (error, results) => {
         if (error) console.log(error);
         res.send(results);
     })
