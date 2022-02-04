@@ -1,6 +1,6 @@
 # dependencies
 /node_modules
-/client/server/.env
+/backend/server/.env
 
 # testing
 /coverage
