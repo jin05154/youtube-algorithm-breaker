@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { ReactComponent as Title } from "../images/title.svg";
-import { ReactComponent as TitleM } from "../images/title_mobile.svg";
+import { ReactComponent as Title } from "../../images/title.svg";
+import { ReactComponent as TitleM } from "../../images/title_mobile.svg";
 
 const Header = () => {
     return (

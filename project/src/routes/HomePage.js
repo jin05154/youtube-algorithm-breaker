@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router-dom";
 
-import Layout from "../components/DefaultLayout";
+import Layout from "../components/layouts/DefaultLayout";
 import ChatIntro from "../components/ChatIntro";
-import Button from "../components/Button";
-import StyledLink from "../components/StyledLink";
+import Button from "../components/utils/Button";
+import StyledLink from "../components/utils/StyledLink";
 
 export default function HomePage() {
   const navigate = useNavigate();

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
-import Layout from "../components/DefaultLayout";
-import Button from "../components/Button";
+import Layout from "../components/layouts/DefaultLayout";
+import Button from "../components/utils/Button";
 
 export default function SelectMode() {
     const navigate = useNavigate();

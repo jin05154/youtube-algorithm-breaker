@@ -1,2 +1,0 @@
-INSERT INTO videos (videoID, video_title, video_url, channel_name, first_category, second_category, playtime, age, sex)
-VALUES (1, '동기부여 (feat. 침착맨)', 'gwJ-mrP6_Ng', '힙포리', 'improve', 'im01', 6, 'all', 100)
