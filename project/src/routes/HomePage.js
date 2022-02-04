@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 
 import Layout from "../components/layouts/DefaultLayout";
 import ChatIntro from "../components/ChatIntro";
+
 import Button from "../components/utils/Button";
 import StyledLink from "../components/utils/StyledLink";
 
@@ -27,8 +28,8 @@ export default function HomePage() {
             <Button theme='pink' text='추천 받아보기 👋' onClick={onClickMainBtn} />
           </div>
         </div>
-        <StyledLink url={"faq"}>FAQ</StyledLink>
-        <StyledLink url={"learn-more"}>Learn More</StyledLink>
+        <StyledLink link={"faq"}>FAQ</StyledLink>
+        <StyledLink link={"learn-more"}>Learn More</StyledLink>
       </div>
     </Layout>
   );
