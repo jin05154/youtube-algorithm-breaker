@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-import Layout from "../components/layouts/DefaultLayout";
+import Layout from "../components/layouts/Layout";
 import ChatIntro from "../components/ChatIntro";
 
 import Button from "../components/utils/Button";
@@ -12,7 +12,7 @@ export default function HomePage() {
     navigate("/recommend");
   };
   return (
-    <Layout>
+    <Layout type='default'>
       <div className="container">
         <div className="top-content">
           <ChatIntro />

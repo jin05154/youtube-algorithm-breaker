@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-import Layout from "../components/layouts/DefaultLayout";
+import Layout from "../components/layouts/Layout";
 import Button from "../components/utils/Button";
 
 export default function SelectMode() {
@@ -12,7 +12,7 @@ export default function SelectMode() {
         navigate("/recommend/random");
     };
     return (
-        <Layout>
+        <Layout type='default'>
             <div id="select-mode" className="container">
                 <Button
                     theme='gray'
