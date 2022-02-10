@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-import Layout from "../components/layouts/DefaultLayout";
-import StyledUrl from '../components/StyledUrl';
+import Layout from "../components/layouts/Layout";
+import ItemContainer from '../components/ItemContainer';
 
 export default function RandomMode() {
     const [videos, setVideos] = useState([]);
@@ -17,11 +17,19 @@ export default function RandomMode() {
     }, []);
 
     return (
-        <Layout>
+        <Layout type='recommend'>
             {videos.map((v, i) =>
                 <div key={i}>
-                    <img src={`http://img.youtube.com/vi/${v.video_url}/0.jpg`} width='200px' alt=''/>
-                    <StyledUrl url={`https://youtu.be/${v.video_url}`}>{v.video_title}</StyledUrl>
+                    <ItemContainer url={`https://youtu.be/${v.video_url}`}>
+                        <div className="img-wrapper">
+                            <img src={`http://img.youtube.com/vi/${v.video_url}/0.jpg`} alt='' />
+                        </div>
+                        <div className="vid-infos">
+                            <h5>{v.video_title}</h5>
+                            <p>{v.channel_name}</p>
+                            <p>{v.playtime}</p>
+                        </div>
+                    </ItemContainer>
                 </div>)}
         </Layout>
     );
