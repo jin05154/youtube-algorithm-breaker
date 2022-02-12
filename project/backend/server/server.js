@@ -4,6 +4,7 @@ const express = require('express');
 const app = express();
 const PORT = 8080
 const cors = require('cors');
+const { default: axios } = require('axios');
 const mysqlConObj = require('./config/mysql');
 const db = mysqlConObj.init();
 
@@ -11,9 +12,17 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/api/video', (req, res) => {
-    db.query(`SELECT * FROM videos`, (err, data) => {
+    var channels = [];
+    db.query(`SELECT * FROM videos`, async (err, data) => {
         if (err) console.log(err);
-        res.send(data);
+        else {
+            for (let i = 0; i < data.length; ++i) {
+                let res = await axios.get(`https://www.googleapis.com/youtube/v3/videos?part=id%2C+snippet&id=${data[i].video_url}&key=${process.env.YT_API_KEY}`);
+                let sub = res.data.items[0].snippet
+                channels.push({ "id": i, "url": data[i].video_url, "video_title": sub.title, "channel_name": sub.channelTitle, "playtime": data[i].playtime });
+            }
+            res.send(channels);
+        }
     })
 })
 

@@ -9,7 +9,8 @@ export default function RandomMode() {
 
     const fetchVideoInfo = async () => {
         axios.get('http://localhost:8080/api/video')
-            .then((res) => setVideos(res.data));
+            .then(res => setVideos(res.data))
+            .catch(err => console.log(err));
     };
 
     useEffect(() => {
@@ -20,9 +21,9 @@ export default function RandomMode() {
         <Layout type='recommend'>
             {videos.map((v, i) =>
                 <div key={i}>
-                    <ItemContainer url={`https://youtu.be/${v.video_url}`}>
+                    <ItemContainer url={`https://youtu.be/${v.url}`}>
                         <div className="img-wrapper">
-                            <img src={`http://img.youtube.com/vi/${v.video_url}/0.jpg`} alt='' />
+                            <img src={`http://img.youtube.com/vi/${v.url}/0.jpg`} alt='' />
                         </div>
                         <div className="vid-infos">
                             <h5>{v.video_title}</h5>
