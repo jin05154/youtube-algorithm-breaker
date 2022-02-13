@@ -47,7 +47,7 @@ const textColor = {
         default: 'var(--black)',
         hover: 'var(--white)'
     }
-}
+};
 
 StyledButton.defaultProps = {
     width: "220px",

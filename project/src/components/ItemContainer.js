@@ -10,12 +10,37 @@ const StyledUrl = styled.div`
     flex-direction: row;
     align-items: center;
     width: 40vw;
-    padding: 10px;
+    padding: 12px;
     margin: 13px;
     font-size: 26px;
-    color: var(--black);
+    color: ${(props) => textColor[props.theme].default};
+    background-color: ${(props) => theme[props.theme].default};
     text-decoration: none;
     cursor: pointer;
-    border: 1px solid var(--black);
-    border-radius: 3px;
+    border: 2.3px solid var(--title-shadow);
+    border-radius: 4px;
+    &:hover {
+        background-color: ${(props) => theme[props.theme].hover};
+        color: ${(props) => textColor[props.theme].hover};
+        border: 2.3px solid ${(props) => theme[props.theme].hover};
+    }
 `;
+
+const theme = {
+    pink: {
+        default: 'var(--white)',
+        hover: 'var(--button-default-color-1)'
+    }
+};
+
+const textColor = {
+    pink: {
+        default: 'var(--black)',
+        hover: 'var(--white)'
+    }
+};
+
+StyledUrl.defaultProps = {
+    theme: "pink",
+    textColor: "pink"
+};

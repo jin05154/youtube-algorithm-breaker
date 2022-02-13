@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+import FadeIn from 'react-fade-in';
 import Layout from "../components/layouts/Layout";
 import ItemContainer from '../components/ItemContainer';
 
@@ -20,7 +21,7 @@ export default function RandomMode() {
     return (
         <Layout type='recommend'>
             {videos.map((v, i) =>
-                <div key={i}>
+                <FadeIn key={i}>
                     <ItemContainer url={`https://youtu.be/${v.url}`}>
                         <div className="img-wrapper">
                             <img src={`http://img.youtube.com/vi/${v.url}/0.jpg`} alt='' />
@@ -31,7 +32,7 @@ export default function RandomMode() {
                             <p>{v.playtime}</p>
                         </div>
                     </ItemContainer>
-                </div>)}
+                </FadeIn>)}
         </Layout>
     );
 }
