@@ -119,6 +119,7 @@ code {
     align-items: center;
     justify-content: center;
     width: 100%;
+    min-height: 60vh;
     padding: 40px 0 10px;
 }
 .container {
