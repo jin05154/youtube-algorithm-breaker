@@ -12,9 +12,12 @@ var ytDurationFormat = require("youtube-duration-format");
 app.use(cors());
 app.use(express.json());
 
+const randQuery = `SELECT * FROM videos AS t1 JOIN 
+(SELECT video_url FROM videos ORDER BY RAND() LIMIT 5) AS t2 ON t1.video_url=t2.video_url`;
+
 app.get("/api/video", (req, res) => {
   var channels = [];
-  db.query(`SELECT * FROM videos`, async (err, data) => {
+  db.query(randQuery, async (err, data) => {
     if (err) console.log(err);
     else {
       for (let i = 0; i < data.length; ++i) {
