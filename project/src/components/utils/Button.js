@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-export default function Button({ theme, text, width, height, onClick }) {
+export default function Button({ theme, text, width, height, margin, onClick }) {
     return (
-        <StyledButton theme={theme} width={width} height={height} onClick={onClick}>
+        <StyledButton theme={theme} width={width} height={height} margin={margin} onClick={onClick}>
             <span>{text}</span>
         </StyledButton>
     );
@@ -17,7 +17,8 @@ const StyledButton = styled.button`
     background-color: ${(props) => theme[props.theme].default};
     border: none;
     border-radius: 6px;
-    margin: 5px;
+    margin-top: ${({ margin }) => margin};
+    margin-bottom: ${({ margin }) => margin};
     cursor: pointer;
     font-size: 23px;
     font-weight: bold;
@@ -52,6 +53,7 @@ const textColor = {
 StyledButton.defaultProps = {
     width: "220px",
     height: "77px",
+    margin: "5px",
     theme: "pink",
     textColor: "pink"
 };
