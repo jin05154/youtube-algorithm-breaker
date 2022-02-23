@@ -167,12 +167,28 @@ code {
     justify-content: center;
     min-height: 60vh;
 }
+#list-mode {
+    display: inherit;
+    min-height: 60vh;
+    padding: 10px 0 0;
+    border-bottom: 2px solid var(--black);
+}
 .img-wrapper {
     width: 300px;
     height: 165px;
     padding: 0 20px 0 0;
 }
 .img-wrapper img {
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+.small-img-wrapper {
+    width: 150px;
+    height: 82.5px;
+    padding: 0 20px 0 0;
+}
+.small-img-wrapper img {
     width: inherit;
     height: inherit;
     object-fit: cover;
