@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 import Layout from "../components/layouts/Layout";
-import ChatIntro from "../components/ChatIntro";
+import ChatIntro from "../components/design/ChatIntro";
 
 import Button from "../components/utils/Button";
 import StyledLink from "../components/utils/StyledLink";

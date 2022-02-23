@@ -4,7 +4,7 @@ import axios from 'axios';
 import FadeIn from 'react-fade-in';
 import SyncLoader from 'react-spinners/SyncLoader';
 import Layout from "../components/layouts/Layout";
-import ItemContainer from '../components/ItemContainer';
+import ItemContainer from '../components/utils/ItemContainer';
 
 export default function RandomMode() {
     const [loading, setLoading] = useState(true);

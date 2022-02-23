@@ -1,10 +1,10 @@
 import React from "react";
 
 import FadeIn from 'react-fade-in';
-import { ReactComponent as SendOne } from '../images/send_1.svg';
-import { ReactComponent as SendTwo } from '../images/send_2.svg';
-import { ReactComponent as SendThree } from '../images/send_3.svg';
-import { ReactComponent as ReplyOne } from '../images/reply_1.svg';
+import { ReactComponent as SendOne } from '../../images/send_1.svg';
+import { ReactComponent as SendTwo } from '../../images/send_2.svg';
+import { ReactComponent as SendThree } from '../../images/send_3.svg';
+import { ReactComponent as ReplyOne } from '../../images/reply_1.svg';
 
 const ChatIntro = () => {
     return (
