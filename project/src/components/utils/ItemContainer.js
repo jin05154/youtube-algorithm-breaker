@@ -9,7 +9,7 @@ const StyledUrl = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 40vw;
+    width: 50vw;
     padding: 12px;
     margin: 13px;
     font-size: 26px;
@@ -17,6 +17,7 @@ const StyledUrl = styled.div`
     background-color: ${(props) => theme[props.theme].default};
     text-decoration: none;
     cursor: pointer;
+    word-break: keep-all;
     border: 2.3px solid var(--title-shadow);
     border-radius: 4px;
     &:hover {
