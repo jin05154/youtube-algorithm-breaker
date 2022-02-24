@@ -28,7 +28,7 @@ app.get("/api/admin", (req, res) => {
         const sub = res.data.items[0].snippet;
         videos.push({
           id: i,
-          url: data[i].video_url,
+          url: `https://youtu.be/${data[i].video_url}`,
           thumbnail: `http://img.youtube.com/vi/${data[i].video_url}/0.jpg`,
           video_title: sub.title,
           channel_name: sub.channelTitle,

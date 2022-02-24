@@ -23,6 +23,7 @@ export default function RandomMode() {
     useEffect(() => {
         fetchVideoInfo();
         if (!videos) return <span>데이터 없음</span>
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
