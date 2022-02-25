@@ -19,6 +19,6 @@ const ToolBar = styled.div`
   align-items: center;
   min-width: 1250px;
   div: first-child {
-      margin-right: 20px;
+    margin-right: 20px;
   }
 `;

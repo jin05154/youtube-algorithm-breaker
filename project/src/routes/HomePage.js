@@ -12,7 +12,7 @@ export default function HomePage() {
     navigate("/recommend");
   };
   return (
-    <Layout type='default'>
+    <Layout type="default">
       <div className="container">
         <div className="top-content">
           <ChatIntro />
@@ -25,7 +25,11 @@ export default function HomePage() {
             <p>추천해드리는 영상들을 즐겨보세요!</p>
           </div>
           <div id="main-btn">
-            <Button theme='pink' text='추천 받아보기 👋' onClick={onClickMainBtn} />
+            <Button
+              theme="pink"
+              text="추천 받아보기 👋"
+              onClick={onClickMainBtn}
+            />
           </div>
         </div>
         <StyledLink link={"faq"}>FAQ</StyledLink>

@@ -21,7 +21,9 @@ export default function Layout({ children, type }) {
       )}
       {type === "onlyPC" && (
         <>
-          <div id="pc-only-header"><Title /></div>
+          <div id="pc-only-header">
+            <Title />
+          </div>
           <div className="pc-body">{children}</div>
         </>
       )}
