@@ -8,6 +8,7 @@ const { default: axios } = require("axios");
 const mysqlConObj = require("./config/mysql");
 const db = mysqlConObj.init();
 var ytDurationFormat = require("youtube-duration-format");
+var moment = require("moment");
 
 app.use(cors());
 app.use(express.json());
@@ -32,12 +33,13 @@ app.get("/api/admin", (req, res) => {
           thumbnail: `http://img.youtube.com/vi/${data[i].video_url}/0.jpg`,
           video_title: sub.title,
           channel_name: sub.channelTitle,
-          publish_date: sub.publishedAt.substring(0, 10)
+          publish_date: moment(sub.publishedAt).format('YYYY-MM-DD'),
+          db_upload_date: moment(data[i].update_time).format('YYYY-MM-DD'),
         });
       }
       res.send(videos);
     }
-  })
+  });
 });
 
 app.get("/api/video", (req, res) => {

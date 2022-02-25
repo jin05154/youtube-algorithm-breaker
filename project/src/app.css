@@ -223,9 +223,15 @@ code {
     font-size: 20px;
 }
 /* Admin */
+.admin-spinner {
+    display: flex;
+    align-items: center;
+    height: 300px;
+}
 .admin-video-title a {
     color: var(--black);
     text-decoration: none;
+    font-size: 1.05em;
 }
 #trash-btn {
     cursor: pointer;

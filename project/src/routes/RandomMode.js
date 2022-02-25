@@ -28,7 +28,7 @@ export default function RandomMode() {
 
     return (
         <Layout type='recommend'>
-            {loading && <SyncLoader color='var(--black)' size={30} margin={5} />}
+            {loading && <SyncLoader color='var(--black)' size={20} margin={3} />}
             {videos.map((v, i) =>
                 <FadeIn key={i}>
                     <ItemContainer url={`https://youtu.be/${v.url}`}>
