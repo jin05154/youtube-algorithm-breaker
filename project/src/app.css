@@ -16,6 +16,7 @@ code {
     --white: #ffffff;
     --black: #000000;
     --title-shadow: #CCCCCC;
+    --admin-top-row: #EFEEEF;
     --footer-text: #21243D;
     --footer-copyrights: #8695A4;
     --button-default-color-1: #EA1D5D;
@@ -126,7 +127,7 @@ code {
     justify-content: center;
     width: 100%;
     min-height: 60vh;
-    padding: 40px 0 10px;
+    padding: 0 0 10px;
 }
 .pc-body {
     display: flex;
