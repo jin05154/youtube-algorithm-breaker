@@ -62,7 +62,7 @@ code {
     justify-content: center;
     align-items: center;
     min-width: 1440px;
-    height: 16%;
+    height: 160px;
 }
 .top-content {
     margin: 18px 0;
@@ -178,6 +178,9 @@ code {
     #main-btn {
         margin: 22px 0 0;
     }
+}
+.mode-name h1 {
+    margin-block-start: 0;
 }
 #select-mode {
     display: inherit;
