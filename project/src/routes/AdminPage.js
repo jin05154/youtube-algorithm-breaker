@@ -30,10 +30,7 @@ export default function AdminPage() {
   }, []);
 
   return (
-    <Layout type="onlyPC">
-      <div className="mode-name">
-        <h1>ADMIN MODE 👷‍♀️</h1>
-      </div>
+    <Layout type="onlyPC" mode="ADMIN MODE 👷‍♀️">
       <ToolBar />
       {catchError && <span>에러가 발생했습니다.</span>}
       {loading && (

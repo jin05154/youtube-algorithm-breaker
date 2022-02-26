@@ -31,8 +31,7 @@ export default function RandomMode() {
   }, []);
 
   return (
-    <Layout type="recommend">
-      <h1>RANDOM MODE 🎲</h1>
+    <Layout type="recommend" mode="RANDOM MODE 🎲">
       {catchError && <span>에러가 발생했습니다.</span>}
       {loading && <SyncLoader color="var(--black)" size={20} margin={3} />}
       {dataExists &&
