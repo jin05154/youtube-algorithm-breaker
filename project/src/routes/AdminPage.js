@@ -16,12 +16,12 @@ export default function AdminPage() {
     try {
       const result = await axios.get("http://localhost:8080/api/admin");
       setVideos(result.data);
-      setLoading(false);
       if (videos !== []) setDataExists(true);
     } catch (error) {
       caughtError(true);
       console.log(error);
     }
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function AdminPage() {
   return (
     <Layout type="onlyPC" mode="ADMIN MODE 👷‍♀️">
       <ToolBar />
-      {catchError && <span>에러가 발생했습니다.</span>}
+      {catchError && <div className="error-msg">에러가 발생했습니다.</div>}
       {loading && (
         <div className="admin-spinner">
           <PulseLoader color="var(--black)" size={15} margin={3} />

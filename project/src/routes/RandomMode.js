@@ -16,12 +16,12 @@ export default function RandomMode() {
     try {
       const result = await axios.get("http://localhost:8080/api/video");
       setVideos(result.data);
-      setLoading(false);
       if (videos !== []) setDataExists(true);
     } catch (error) {
       caughtError(true);
       console.log(error);
     }
+    setLoading(false);
   };
 
   useEffect(() => {
