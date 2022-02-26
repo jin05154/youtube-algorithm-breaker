@@ -140,7 +140,7 @@ code {
     justify-content: center;
     width: 100%;
     min-height: 60vh;
-    padding: 0 0 10px;
+    padding: 20px 0 10px;
 }
 .pc-body {
     display: flex;
@@ -254,10 +254,11 @@ code {
     align-items: center;
     height: 300px;
 }
-.admin-video-title a {
-    color: var(--black);
-    text-decoration: none;
-    font-size: 1.05em;
+.admin-click-to-watch {
+    display: inherit;
+    flex-direction: inherit;
+    align-items: center;
+    cursor: pointer;
 }
 #trash-btn {
     cursor: pointer;

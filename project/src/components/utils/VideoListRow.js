@@ -4,6 +4,7 @@ import Checkbox from "@mui/material/Checkbox";
 import { ReactComponent as TrashIcon } from "../../images/trash.svg";
 
 export default function VideoListRow({ type, video }) {
+  const onClickTitle = () => window.open(video.url, "_blank");
   return (
     <>
       {type === "content" && (
@@ -17,13 +18,13 @@ export default function VideoListRow({ type, video }) {
               }}
             />
           </div>
-          <div className="small-img-wrapper">
-            <img src={video.thumbnail} alt="" />
-          </div>
-          <div style={{ width: "530px" }} className="admin-video-title">
-            <a href={video.url} target="_blank" rel="noreferrer">
+          <div className="admin-click-to-watch" onClick={onClickTitle}>
+            <div className="small-img-wrapper">
+              <img src={video.thumbnail} alt="" />
+            </div>
+            <div style={{ width: "530px", fontSize: "1.05em" }}>
               {video.video_title}
-            </a>
+            </div>
           </div>
           <div style={{ width: "150px" }}>{video.channel_name}</div>
           <div style={{ width: "100px" }}>{video.publish_date}</div>
