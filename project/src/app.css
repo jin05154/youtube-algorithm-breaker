@@ -51,6 +51,7 @@ code {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .mobile-header-title {
     display: none;

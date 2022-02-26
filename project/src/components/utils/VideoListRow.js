@@ -36,7 +36,15 @@ export default function VideoListRow({ type, video }) {
       )}
       {type === "top" && (
         <TopRow>
-          <div style={{ width: "42px" }}>선택</div>
+          <div style={{ width: "42px" }}>
+            <Checkbox
+              sx={{
+                "&.Mui-checked": {
+                  color: "var(--button-default-color-1)",
+                },
+              }}
+            />
+          </div>
           <div style={{ width: "150px" }}>썸네일</div>
           <div style={{ width: "530px" }}>제목</div>
           <div style={{ width: "150px" }}>채널명</div>
@@ -83,7 +91,10 @@ const TopRow = styled.div`
     margin-right: 10px;
   }
   div: nth-child(4) {
-    margin-right: 28px;
+    margin-right: 34px;
+  }
+  div: nth-child(5) {
+    margin-right: 15px;
   }
   div: nth-child(6) {
     margin-right: 10px;
