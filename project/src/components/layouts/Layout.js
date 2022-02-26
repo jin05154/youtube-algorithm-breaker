@@ -23,9 +23,7 @@ export default function Layout({ children, type, mode }) {
         <div className="pc-layout">
           <div className="pc-only-header">
             <Title />
-          </div>
-          <div className="mode-name">
-            <h1>{mode}</h1>
+            <h2>{mode}</h2>
           </div>
           <div className="pc-body">{children}</div>
         </div>

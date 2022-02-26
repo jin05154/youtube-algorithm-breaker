@@ -14,9 +14,7 @@ export default function Header({ mode }) {
           <TitleM />
         </div>
       </div>
-      <div className="mode-name">
-        <h1>{mode}</h1>
-      </div>
+      <h2>{mode}</h2>
     </div>
   );
 }
