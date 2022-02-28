@@ -6,7 +6,7 @@ import { ReactComponent as TitleM } from "../../images/title_mobile.svg";
 
 export default function Header({ mode }) {
   const history = useNavigate();
-  const onClickLogo = () => history("/youtube-algorithm-breaker");
+  const onClickLogo = () => history("/");
   return (
     <div className="header">
       <div className="header-title" onClick={onClickLogo}>
