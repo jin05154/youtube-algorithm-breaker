@@ -1,8 +1,12 @@
+import { useNavigate } from "react-router-dom";
+
 import Footer from "./Footer";
 import Header from "./Header";
 import { ReactComponent as Title } from "../../images/title.svg";
 
 export default function Layout({ children, type, mode }) {
+  const history = useNavigate();
+  const onClickLogo = () => history("/youtube-algorithm-breaker");
   return (
     <div className="App">
       {type === "default" && (
@@ -22,7 +26,9 @@ export default function Layout({ children, type, mode }) {
       {type === "onlyPC" && (
         <div className="pc-layout">
           <div className="pc-only-header">
-            <Title />
+            <div className="header-title">
+              <Title onClick={onClickLogo} />
+            </div>
             <h2>{mode}</h2>
           </div>
           <div className="pc-body">{children}</div>
