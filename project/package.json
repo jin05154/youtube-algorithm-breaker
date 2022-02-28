@@ -2,7 +2,7 @@
   "name": "stepout",
   "version": "0.1.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://jin05154.github.io/youtube-algorithm-breaker/",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@emotion/react": "^11.8.1",
@@ -16,6 +16,7 @@
     "concurrently": "^7.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.2",
+    "gh-pages": "^3.2.3",
     "http-proxy-middleware": "^2.0.2",
     "moment": "^2.29.1",
     "mysql": "^2.18.1",
@@ -33,7 +34,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
