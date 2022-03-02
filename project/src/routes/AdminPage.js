@@ -31,7 +31,6 @@ export default function AdminPage() {
 
   return (
     <Layout type="onlyPC" mode="ADMIN MODE 👷‍♀️">
-      <ToolBar />
       {catchError && <div className="error-msg">에러가 발생했습니다.</div>}
       {loading && (
         <div className="admin-spinner">
@@ -39,12 +38,15 @@ export default function AdminPage() {
         </div>
       )}
       {dataExists && (
-        <div id="list-mode" className="container">
-          <ListRow type="top" />
-          {videos.map((v, i) => (
-            <ListRow type="content" video={v} key={i} />
-          ))}
-        </div>
+        <>
+          <ToolBar />
+          <div id="list-mode" className="container">
+            <ListRow type="top" />
+            {videos.map((v, i) => (
+              <ListRow type="content" video={v} key={i} />
+            ))}
+          </div>
+        </>
       )}
     </Layout>
   );
