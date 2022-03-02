@@ -16,7 +16,6 @@
     "concurrently": "^7.0.0",
     "cors": "^2.8.5",
     "express": "^4.17.2",
-    "heroku": "^7.59.3",
     "http-proxy-middleware": "^2.0.2",
     "moment": "^2.29.1",
     "mysql": "^2.18.1",
