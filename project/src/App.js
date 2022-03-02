@@ -6,6 +6,7 @@ import Main from "./routes/HomePage";
 import RandomMode from "./routes/RandomMode";
 import SelectMode from "./routes/SelectMode";
 import NotReadyPage from "./routes/NotReadyPage";
+import AdminLogin from "./routes/AdminLoginPage";
 import Admin from "./routes/AdminPage";
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Route path="recommend/random" element={<RandomMode />} />
       <Route path="faq" element={<NotReadyPage />} />
       <Route path="learn-more" element={<NotReadyPage />} />
+      <Route path="login/admin" element={<AdminLogin />} />
       <Route path="admin" element={<Admin />} />
     </Routes>
   );
