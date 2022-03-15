@@ -14,7 +14,7 @@ export default function AdminPage() {
 
   const fetchVideoInfo = async () => {
     try {
-      const result = await axios.get("http://localhost:8080/api/admin");
+      const result = await axios.get("https://yt-algorithm-breaker.herokuapp.com/api/admin");
       setVideos(result.data);
       if (videos !== []) setDataExists(true);
     } catch (error) {
