@@ -14,7 +14,9 @@ export default function RandomMode() {
 
   const fetchVideoInfo = async () => {
     try {
-      const result = await axios.get("https://yt-algorithm-breaker.herokuapp.com/api/video");
+      const result = await axios.get(
+        process.env.REACT_APP_SERVER_API + "/api/video"
+      );
       setVideos(result.data);
       if (videos !== []) setDataExists(true);
     } catch (error) {

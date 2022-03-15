@@ -61,6 +61,7 @@
     "@webpack-cli/generators": "^2.4.1",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
+    "dotenv-webpack": "^7.1.0",
     "html-webpack-plugin": "^5.5.0",
     "nodemon": "^2.0.15",
     "prettier": "^2.4.1",
