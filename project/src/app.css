@@ -245,9 +245,13 @@ code {
 }
 .error-msg {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 50vh;
+}
+.error-msg h1 {
+    margin-block-end: 1em;
 }
 /* Admin */
 .admin-spinner {
