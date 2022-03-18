@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
+
 import styled from "styled-components";
 
 export default function AdminLoginBox() {
@@ -13,6 +15,16 @@ export default function AdminLoginBox() {
   };
   const onClickLogin = () => {
     console.log("login");
+    axios.post('/user/login', null, {
+      params: {
+        'id': inputID,
+        'pw': inputPW
+      }
+    })
+    .then(res => {
+      console.log(res);
+    })
+    .catch()
   };
   return (
     <LoginBox>
