@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "homepage": ".",
+  "proxy": "https://yt-algorithm-breaker.herokuapp.com",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "@emotion/react": "^11.8.1",
