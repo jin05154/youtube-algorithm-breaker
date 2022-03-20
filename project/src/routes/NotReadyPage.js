@@ -4,7 +4,7 @@ import Button from "../components/utils/Button";
 const NotReadyPage = () => {
   const navigate = useNavigate();
   const onClickMainBtn = () => {
-    navigate("/recommend");
+    navigate("/");
   };
   return (
     <div className="error-msg">
