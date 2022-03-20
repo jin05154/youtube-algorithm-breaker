@@ -5,7 +5,7 @@ import styled from "styled-components";
 import Layout from "../components/layouts/Layout";
 
 async function LoginUser(credentials) {
-  return fetch(process.env.REACT_APP_LOCAL_API + "/user/login", {
+  return fetch(process.env.REACT_APP_SERVER_API + "/user/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
