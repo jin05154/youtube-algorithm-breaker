@@ -34,7 +34,7 @@ export default function HomePage() {
         </div>
         <StyledLink link={"faq"}>FAQ</StyledLink>
         <StyledLink link={"learn-more"}>Learn More</StyledLink>
-        <StyledLink link={"login/admin"}>Admin</StyledLink>
+        <StyledLink link={"admin"}>Admin</StyledLink>
       </div>
     </Layout>
   );
