@@ -15,7 +15,7 @@ export default function AdminPage() {
   const fetchVideoInfo = async () => {
     try {
       const result = await axios.get(
-        process.env.REACT_APP_SERVER_API + "/api/admin"
+        `${process.env.REACT_APP_SERVER_API}/api/admin`
       );
       setVideos(result.data);
       if (videos !== []) setDataExists(true);
