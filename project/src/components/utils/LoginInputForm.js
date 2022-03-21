@@ -40,6 +40,7 @@ export default function FormInputItem({ type, inputInfo, handleInfo }) {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
+  margin: 0 0 23px 0;
 `;
 const StyledBox = styled.div`
   display: flex;
@@ -48,18 +49,16 @@ const StyledBox = styled.div`
   width: 30px;
   height: 50px;
   padding: 0 10px;
-  margin: 0 0 20px 0;
   border: none;
-  border-radius: 5px;
+  border-radius: 5px 0 0 5px;
   background: var(--login-input-background);
 `;
 const InputForm = styled.input`
   width: 270px;
   height: 50px;
   padding: 0 5px;
-  margin: 0 0 10px 0;
   border: none;
-  border-radius: 5px;
+  border-radius: 0 5px 5px 0;
   outline: none;
   background: var(--login-input-background);
   font-size: 15px;

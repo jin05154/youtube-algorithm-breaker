@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import FormInputItem from "../utils/FormInputItem";
+import InputForm from "../utils/LoginInputForm";
 
 export default function LoginForm({
   inputID,
@@ -10,23 +10,18 @@ export default function LoginForm({
 }) {
   return (
     <LoginBox>
-      <h1>LOGIN</h1>
+      <Greetings>
+        <h1>LOGIN</h1>
+        <h3>관리자임을 인증해주세요.</h3>
+      </Greetings>
       <form onSubmit={onSubmit}>
         <LoginMenuWrap>
           <InputsWrap>
-            <FormInputItem
-              type="ID"
-              inputInfo={inputID}
-              handleInfo={handleID}
-            />
-            <FormInputItem
-              type="PW"
-              inputInfo={inputPW}
-              handleInfo={handlePW}
-            />
+            <InputForm type="ID" inputInfo={inputID} handleInfo={handleID} />
+            <InputForm type="PW" inputInfo={inputPW} handleInfo={handlePW} />
           </InputsWrap>
           <div>
-            <button type="submit">LOGIN</button>
+            <LoginButton type="submit">로그인</LoginButton>
           </div>
         </LoginMenuWrap>
       </form>
@@ -44,6 +39,13 @@ const LoginBox = styled.div`
   background: var(--white);
   border: 1px solid var(--login-box-border);
   border-radius: 10px;
+  h1 {
+    margin-block-end: 0em;
+  }
+  h3 {
+    margin-block-start: 0.6em;
+    margin-block-end: 1.8em;
+  }
 `;
 const LoginMenuWrap = styled.div`
   display: inherit;
@@ -56,4 +58,23 @@ const InputsWrap = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 0 10px 0 0;
+`;
+const Greetings = styled.div`
+  display: inherit;
+  flex-direction: inherit;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 330px;
+`;
+const LoginButton = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 330px;
+  height: 50px;
+  border-radius: 5px;
+  background: var(--button-default-color-1);
+  color: var(--white);
+  font-size: 20px;
+  cursor: pointer;
 `;
