@@ -25,7 +25,7 @@ export default function FormInputItem({ type, inputInfo, handleInfo }) {
             <PasswordIcon />
           </StyledBox>
           <InputForm
-            type="text"
+            type="password"
             name="input_id"
             placeholder="비밀번호"
             value={inputInfo}

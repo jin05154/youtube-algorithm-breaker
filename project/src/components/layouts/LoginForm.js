@@ -14,8 +14,8 @@ export default function LoginForm({
         <h1>LOGIN</h1>
         <h3>관리자임을 인증해주세요.</h3>
       </Greetings>
-      <form onSubmit={onSubmit}>
-        <LoginMenuWrap>
+      <LoginMenuWrap>
+        <form onSubmit={onSubmit}>
           <InputsWrap>
             <InputForm type="ID" inputInfo={inputID} handleInfo={handleID} />
             <InputForm type="PW" inputInfo={inputPW} handleInfo={handlePW} />
@@ -23,8 +23,8 @@ export default function LoginForm({
           <div>
             <LoginButton type="submit">로그인</LoginButton>
           </div>
-        </LoginMenuWrap>
-      </form>
+        </form>
+      </LoginMenuWrap>
     </LoginBox>
   );
 }
@@ -66,12 +66,13 @@ const Greetings = styled.div`
   align-items: flex-start;
   width: 330px;
 `;
-const LoginButton = styled.div`
+const LoginButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
   width: 330px;
   height: 50px;
+  border: none;
   border-radius: 5px;
   background: var(--button-default-color-1);
   color: var(--white);
