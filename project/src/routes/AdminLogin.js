@@ -17,6 +17,7 @@ async function LoginUser(credentials) {
 export default function AdminLogin({ setToken }) {
   const [inputID, setInputID] = useState("");
   const [inputPW, setInputPW] = useState("");
+  const [errMsg, setErrMsg] = useState("");
 
   const handleInputID = (e) => {
     setInputID(e.target.value);
@@ -31,6 +32,7 @@ export default function AdminLogin({ setToken }) {
       inputPW,
     });
     setToken(token);
+    // if (token.msg) console.log(token.msg);
   };
 
   return (
