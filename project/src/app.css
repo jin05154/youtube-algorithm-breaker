@@ -58,17 +58,6 @@ code {
 .mobile-header-title {
     display: none;
 }
-@media (max-width: 640px) {
-    .header-title {
-        padding: 50px 0 4px;
-    }
-    .pc-header-title {
-        display: none;
-    }
-    .mobile-header-title {
-        display: block;
-    }
-}
 .pc-only-header {
     display: flex;
     flex-direction: column;
@@ -94,16 +83,32 @@ code {
     -webkit-transform: scale(1.2);
     padding: 17px 0;
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+    .header {
+        height: 200px;
+        padding: 40px 0 0 0;
+    }
+    .pc-header-title {
+        display: none;
+    }
+    .mobile-header-title {
+        display: block;
+        transform: scale(0.9);
+        -o-transform: scale(0.9); 
+        -moz-transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+    }
     .top-content {
         margin: 0;
         padding: 0 !important;
+        height: 200px;
     }
     .chat {
-        transform: scale(1.0);
-        -o-transform: scale(1.0); 
-        -moz-transform: scale(1.0);
-        -webkit-transform: scale(1.0);
+        padding: 0;
+        transform: scale(0.9);
+        -o-transform: scale(0.9); 
+        -moz-transform: scale(0.9);
+        -webkit-transform: scale(0.9);
     }
 }
 .chat div {
@@ -188,9 +193,17 @@ code {
 #main-btn {
     margin: 29px 0 0;
 }
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+    .default-body {
+        margin-top: -16px;
+    }
+    .container {
+        padding: 0;
+    }
     .detail {
-        font-size: 17px;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 15px 0 12px 0;
     }
     #last-detail {
         display: flex;
@@ -198,7 +211,7 @@ code {
         align-items: center;
     }
     #main-btn {
-        margin: 22px 0 0;
+        margin: 16px 0 0;
     }
 }
 #select-mode {
