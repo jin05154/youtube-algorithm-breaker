@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
+import { isBrowser, isMobile } from 'react-device-detect';
 import axios from "axios";
 
 import FadeIn from "react-fade-in";
 import SyncLoader from "react-spinners/SyncLoader";
 import Layout from "../components/layouts/Layout";
-import ItemContainer from "../components/utils/ItemContainer";
+import BrowserContainer from "../components/utils/ItemContainerBrowser";
+import MobileContainer from "../components/utils/ItemContainerMobile";
 import Button from "../components/utils/Button";
 
 export default function RandomMode() {
@@ -44,18 +46,34 @@ export default function RandomMode() {
       {catchError && <span>에러가 발생했습니다.</span>}
       {loading && <SyncLoader color="var(--black)" size={20} margin={3} />}
       {dataExists &&
+        isBrowser &&
         videos.map((v, i) => (
           <FadeIn key={i}>
-            <ItemContainer url={`https://youtu.be/${v.url}`}>
+            <BrowserContainer url={`https://youtu.be/${v.url}`}>
               <div className="img-wrapper">
-                <img src={`http://img.youtube.com/vi/${v.url}/0.jpg`} alt="" />
+                <img src={`http://img.youtube.com/vi/${v.url}/hqdefault.jpg`} alt="" />
               </div>
               <div className="vid-infos">
                 <h5>{v.video_title}</h5>
                 <p>{v.channel_name}</p>
                 <p>{v.playtime}</p>
               </div>
-            </ItemContainer>
+            </BrowserContainer>
+          </FadeIn>
+        ))}
+      {dataExists &&
+        isMobile &&
+        videos.map((v, i) => (
+          <FadeIn key={i}>
+            <MobileContainer
+              url={`https://youtu.be/${v.url}`}
+              img={`http://img.youtube.com/vi/${v.url}/hqdefault.jpg`}
+              title={v.video_title}
+              channel={v.channel_name}
+              avatar={v.channel_art}
+              playtime={v.playtime}
+              date={v.publish_date}
+            />
           </FadeIn>
         ))}
       {dataExists && (

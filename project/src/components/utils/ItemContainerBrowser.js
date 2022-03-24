@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
-export default function ItemContainer({ children, url }) {
+export default function ItemContainerBrowser({ children, url }) {
   const onClickContainer = () => window.open(url, "_blank");
-  return <StyledUrl onClick={onClickContainer}>{children}</StyledUrl>;
+  return (
+    <BrowserContainer onClick={onClickContainer}>{children}</BrowserContainer>
+  );
 }
 
-const StyledUrl = styled.div`
+const BrowserContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -41,7 +43,7 @@ const textColor = {
   },
 };
 
-StyledUrl.defaultProps = {
+BrowserContainer.defaultProps = {
   theme: "pink",
   textColor: "pink",
 };
