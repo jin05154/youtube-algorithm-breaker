@@ -43,10 +43,7 @@ code {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    height: 20vh;
-}
-.header h2 {
-    margin-block-end: 0;
+    height: 18vh;
 }
 .header-title {
     display: inherit;
@@ -67,6 +64,13 @@ code {
     height: 20vh;
 }
 .pc-only-header h2 {
+    margin-block-end: 0;
+}
+.header-mode-name {
+    display: flex;
+    justify-content: center;
+}
+.header-mode-name h2 {
     margin-block-end: 0;
 }
 .top-content {
