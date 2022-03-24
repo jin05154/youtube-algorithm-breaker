@@ -6,13 +6,14 @@ export default function LoginForm({
   inputPW,
   handleID,
   handlePW,
+  errMsg,
   onSubmit,
 }) {
   return (
     <LoginBox>
       <Greetings>
         <h1>LOGIN</h1>
-        <h3>관리자임을 인증해주세요.</h3>
+        <h3>관리자 외 접근금지</h3>
       </Greetings>
       <LoginMenuWrap>
         <form onSubmit={onSubmit}>
@@ -20,6 +21,9 @@ export default function LoginForm({
             <InputForm type="ID" inputInfo={inputID} handleInfo={handleID} />
             <InputForm type="PW" inputInfo={inputPW} handleInfo={handlePW} />
           </InputsWrap>
+          <div>
+            <ErrorMessage>{errMsg}</ErrorMessage>
+          </div>
           <div>
             <LoginButton type="submit">로그인</LoginButton>
           </div>
@@ -35,6 +39,7 @@ const LoginBox = styled.div`
   align-items: center;
   width: 500px;
   height: 400px;
+  padding: 0 0 20px 0;
   margin: 40px 0 0;
   background: var(--white);
   border: 1px solid var(--login-box-border);
@@ -57,7 +62,6 @@ const InputsWrap = styled.div`
   display: inherit;
   flex-direction: column;
   align-items: center;
-  padding: 0 10px 0 0;
 `;
 const Greetings = styled.div`
   display: inherit;
@@ -65,6 +69,10 @@ const Greetings = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   width: 330px;
+`;
+const ErrorMessage = styled.p`
+  margin-block-start: 0.7em;
+  color: red;
 `;
 const LoginButton = styled.button`
   display: flex;

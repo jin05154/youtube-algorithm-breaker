@@ -32,7 +32,7 @@ export default function AdminLogin({ setToken }) {
       inputPW,
     });
     setToken(token);
-    // if (token.msg) console.log(token.msg);
+    if (token.msg) setErrMsg(token.msg);
   };
 
   return (
@@ -42,6 +42,7 @@ export default function AdminLogin({ setToken }) {
         inputPW={inputPW}
         handleID={handleInputID}
         handlePW={handleInputPW}
+        errMsg={errMsg}
         onSubmit={onSubmit}
       />
     </Layout>

@@ -4,9 +4,9 @@ import { ReactComponent as PasswordIcon } from "../../images/password.svg";
 
 export default function FormInputItem({ type, inputInfo, handleInfo }) {
   return (
-    <Wrapper>
+    <>
       {type === "ID" && (
-        <>
+        <IdWrapper>
           <StyledBox>
             <UsernameIcon />
           </StyledBox>
@@ -17,10 +17,10 @@ export default function FormInputItem({ type, inputInfo, handleInfo }) {
             value={inputInfo}
             onChange={handleInfo}
           />
-        </>
+        </IdWrapper>
       )}
       {type === "PW" && (
-        <>
+        <PwWrapper>
           <StyledBox>
             <PasswordIcon />
           </StyledBox>
@@ -31,16 +31,21 @@ export default function FormInputItem({ type, inputInfo, handleInfo }) {
             value={inputInfo}
             onChange={handleInfo}
           />
-        </>
+        </PwWrapper>
       )}
-    </Wrapper>
+    </>
   );
 }
 
-const Wrapper = styled.div`
+const IdWrapper = styled.div`
   display: flex;
   flex-direction: row;
   margin: 0 0 23px 0;
+`;
+const PwWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin: 0 0 5px 0;
 `;
 const StyledBox = styled.div`
   display: flex;
