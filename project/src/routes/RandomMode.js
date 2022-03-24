@@ -5,6 +5,7 @@ import FadeIn from "react-fade-in";
 import SyncLoader from "react-spinners/SyncLoader";
 import Layout from "../components/layouts/Layout";
 import ItemContainer from "../components/utils/ItemContainer";
+import Button from "../components/utils/Button";
 
 export default function RandomMode() {
   const [loading, setLoading] = useState(true);
@@ -25,6 +26,12 @@ export default function RandomMode() {
     }
     setLoading(false);
   };
+
+  const refreshList = () => {
+    setDataExists(false);
+    setLoading(true);
+    fetchVideoInfo();
+  }
 
   useEffect(() => {
     fetchVideoInfo();
@@ -51,6 +58,14 @@ export default function RandomMode() {
             </ItemContainer>
           </FadeIn>
         ))}
+      {dataExists && (
+        <Button
+          theme="pink"
+          text="새로고침"
+          margin="10px"
+          onClick={refreshList}
+        />
+      )}
     </Layout>
   );
 }
