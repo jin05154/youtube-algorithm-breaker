@@ -6,6 +6,7 @@ export default function Button({
   width,
   height,
   border = "none",
+  fontSize = "23px",
   margin,
   onClick,
 }) {
@@ -15,6 +16,7 @@ export default function Button({
       width={width}
       height={height}
       border={border}
+      fontSize={fontSize}
       margin={margin}
       onClick={onClick}
     >
@@ -35,7 +37,7 @@ const StyledButton = styled.button`
   margin-top: ${({ margin }) => margin};
   margin-bottom: ${({ margin }) => margin};
   cursor: pointer;
-  font-size: 23px;
+  font-size: ${({ fontSize }) => fontSize};
   font-weight: bold;
   &:hover {
     background-color: ${(props) => theme[props.theme].hover};

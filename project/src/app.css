@@ -86,7 +86,7 @@ code {
 @media (max-width: 768px) {
     .header {
         height: 200px;
-        padding: 40px 0 0 0;
+        padding: 22px 0 0 0;
     }
     .pc-header-title {
         display: none;
@@ -193,27 +193,6 @@ code {
 #main-btn {
     margin: 29px 0 0;
 }
-@media (max-width: 768px) {
-    .default-body {
-        margin-top: -16px;
-    }
-    .container {
-        padding: 0;
-    }
-    .detail {
-        font-size: 16px;
-        font-weight: 500;
-        padding: 15px 0 12px 0;
-    }
-    #last-detail {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    #main-btn {
-        margin: 16px 0 0;
-    }
-}
 #select-mode {
     display: inherit;
     justify-content: center;
@@ -267,6 +246,30 @@ code {
 }
 .error-msg h1 {
     margin-block-end: 1em;
+}
+@media (max-width: 768px) {
+    .default-body {
+        margin-top: -16px;
+    }
+    .container {
+        padding: 0;
+    }
+    .detail {
+        font-size: 16px;
+        font-weight: 500;
+        padding: 15px 0 12px 0;
+    }
+    #last-detail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #main-btn {
+        margin: 16px 0 0;
+    }
+    #select-mode {
+        min-height: 50vh;
+    }
 }
 /* Admin */
 .admin-spinner {
