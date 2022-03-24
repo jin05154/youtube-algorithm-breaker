@@ -21,6 +21,7 @@ export default function SelectMode() {
             text="시청패턴 분석 후 맞춤형으로 추천 받기 🎯"
             width="500px"
             height="120px"
+            border="3px solid var(--black)"
             margin="30px"
             onClick={onClickRecommendBtn}
           />
@@ -31,6 +32,7 @@ export default function SelectMode() {
             text="그냥 아무거나 빨리 추천 받기 🎲"
             width="500px"
             height="120px"
+            border="3px solid var(--black)"
             margin="30px"
             onClick={onClickRandomBtn}
           />

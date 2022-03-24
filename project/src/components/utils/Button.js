@@ -5,6 +5,7 @@ export default function Button({
   text,
   width,
   height,
+  border = "none",
   margin,
   onClick,
 }) {
@@ -13,6 +14,7 @@ export default function Button({
       theme={theme}
       width={width}
       height={height}
+      border={border}
       margin={margin}
       onClick={onClick}
     >
@@ -28,7 +30,7 @@ const StyledButton = styled.button`
   height: ${({ height }) => height};
   color: ${(props) => textColor[props.theme].default};
   background-color: ${(props) => theme[props.theme].default};
-  border: none;
+  border: ${({ border }) => border};
   border-radius: 6px;
   margin-top: ${({ margin }) => margin};
   margin-bottom: ${({ margin }) => margin};
