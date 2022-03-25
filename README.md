@@ -30,7 +30,7 @@ TAB은 유튜브 시청 기록 정보를 수집하여 분석하지 않기 때문
 ## 📃 Documentation
 
 ### Link
-[YouTube Algorithm Breaker](https://jin05154.github.io/youtube-algorithm-breaker/)
+[YouTube Algorithm Breaker](https://yt-algorithm-breaker.netlify.app/)
 
 
 ## 🙋‍♀️ Author
