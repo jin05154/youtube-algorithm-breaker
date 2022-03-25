@@ -51,12 +51,21 @@ export default function RandomMode() {
           <FadeIn key={i}>
             <BrowserContainer url={`https://youtu.be/${v.url}`}>
               <div className="img-wrapper">
-                <img src={`http://img.youtube.com/vi/${v.url}/hqdefault.jpg`} alt="" />
+                <img
+                  src={`http://img.youtube.com/vi/${v.url}/hqdefault.jpg`}
+                  alt="영상 불러오기 실패"
+                />
+                <div>{v.playtime}</div>
               </div>
               <div className="vid-infos">
                 <h5>{v.video_title}</h5>
-                <p>{v.channel_name}</p>
-                <p>{v.playtime}</p>
+                <div className="channel-info">
+                  <div className="vid-info-avatar">
+                    <img src={v.channel_art} alt={v.channel_name} />
+                  </div>
+                  <p>{v.channel_name}</p>
+                </div>
+                <p>{v.publish_date}</p>
               </div>
             </BrowserContainer>
           </FadeIn>

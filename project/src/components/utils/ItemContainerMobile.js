@@ -6,7 +6,7 @@ export default function ItemContainerMobile({ url, img, title, channel, avatar, 
     <>
       <MobileContainer onClick={onClickContainer}>
         <div className="img-wrapper">
-          <img src={img} alt="이미지 로딩 실패" />
+          <img src={img} alt="영상 불러오기 실패" />
           <div>{playtime}</div>
         </div>
         <div className="vid-info-wrapper">
