@@ -23,6 +23,13 @@ export default function Layout({ children, type, mode }) {
           <Footer />
         </>
       )}
+      {type === "simple" && (
+        <>
+          <Header />
+          <div className="simple-body">{children}</div>
+          <Footer />
+        </>
+      )}
       {type === "onlyPC" && (
         <div className="pc-layout">
           <div className="pc-only-header">

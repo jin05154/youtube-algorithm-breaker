@@ -164,6 +164,14 @@ code {
     min-width: 1440px;
     padding: 0 0 40px;
 }
+.simple-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30vh;
+}
 .pc-layout {
     display: flex;
     flex-direction: column;
