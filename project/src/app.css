@@ -209,6 +209,30 @@ code {
     padding: 10px 0 0;
     border-bottom: 2px solid var(--black);
 }
+.item-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50vw;
+    padding: 12px;
+    margin: 13px;
+    font-size: 26px;
+    color: var(--black);
+    background-color: var(--white);
+    text-decoration: none;
+    cursor: pointer;
+    word-break: keep-all;
+    border: 2.3px solid var(--title-shadow);
+    border-radius: 4px;
+}
+.item-container:hover {
+    background-color: var(--button-default-color-1);
+    color: var(--white);
+    border: 2.3px solid var(--button-default-color-1);
+}
+.item-container:hover .vid-infos p {
+    color: var(--white);
+}
 .img-wrapper {
     display: flex;
     flex-direction: column;
@@ -312,6 +336,30 @@ code {
     #select-mode {
         min-height: 50vh;
     }
+    .item-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 83vw;
+        padding: 12px;
+        margin: 13px 0;
+        font-size: 15px;
+        color: var(--black);
+        background-color: var(--white);
+        text-decoration: none;
+        cursor: pointer;
+        word-break: keep-all;
+        border: 2.3px solid var(--title-shadow);
+        border-radius: 4px;
+    }
+    .item-container:hover {
+        background-color: var(--button-default-color-1);
+        color: var(--white);
+        border: 2.3px solid var(--button-default-color-1);
+    }
+    .item-container:hover .vid-infos p {
+        color: var(--white);
+    }
     .img-wrapper {
         display: flex;
         flex-direction: column;
@@ -352,9 +400,9 @@ code {
         width: 256px;
         padding-top: 5px;
     }
-    .vid-infos p:first-child {
-        font-weight: bold;
-        font-size: 17.3px;
+    .vid-infos h3 {
+        margin-block-start: 0.2em;
+        margin-block-end: 0.2em;
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;

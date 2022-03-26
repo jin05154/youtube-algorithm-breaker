@@ -1,49 +1,25 @@
-import styled from "styled-components";
-
-export default function ItemContainerBrowser({ children, url }) {
-  const onClickContainer = () => window.open(url, "_blank");
+export default function ItemContainerBrowser({ video }) {
+  const onClickContainer = () =>
+    window.open(`https://youtu.be/${video.url}`, "_blank");
   return (
-    <BrowserContainer onClick={onClickContainer}>{children}</BrowserContainer>
+    <div className="item-container" onClick={onClickContainer}>
+      <div className="img-wrapper">
+        <img
+          src={`http://img.youtube.com/vi/${video.url}/hqdefault.jpg`}
+          alt="영상 불러오기 실패"
+        />
+        <div>{video.playtime}</div>
+      </div>
+      <div className="vid-infos">
+        <h5>{video.video_title}</h5>
+        <div className="channel-info">
+          <div className="vid-info-avatar">
+            <img src={video.channel_art} alt={video.channel_name} />
+          </div>
+          <p>{video.channel_name}</p>
+        </div>
+        <p>{video.publish_date}</p>
+      </div>
+    </div>
   );
 }
-
-const BrowserContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 50vw;
-  padding: 12px;
-  margin: 13px;
-  font-size: 26px;
-  color: ${(props) => textColor[props.theme].default};
-  background-color: ${(props) => theme[props.theme].default};
-  text-decoration: none;
-  cursor: pointer;
-  word-break: keep-all;
-  border: 2.3px solid var(--title-shadow);
-  border-radius: 4px;
-  &:hover {
-    background-color: ${(props) => theme[props.theme].hover};
-    color: ${(props) => textColor[props.theme].hover};
-    border: 2.3px solid ${(props) => theme[props.theme].hover};
-  }
-`;
-
-const theme = {
-  pink: {
-    default: "var(--white)",
-    hover: "var(--button-default-color-1)",
-  },
-};
-
-const textColor = {
-  pink: {
-    default: "var(--black)",
-    hover: "var(--white)",
-  },
-};
-
-BrowserContainer.defaultProps = {
-  theme: "pink",
-  textColor: "pink",
-};

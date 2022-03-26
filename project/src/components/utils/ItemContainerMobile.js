@@ -1,66 +1,27 @@
-import styled from "styled-components";
-
-export default function ItemContainerMobile({ url, img, title, channel, avatar, playtime, date }) {
-  const onClickContainer = () => window.open(url, "_blank");
+export default function ItemContainerMobile({ video }) {
+  const onClickContainer = () =>
+    window.open(`https://youtu.be/${video.url}`, "_blank");
   return (
     <>
-      <MobileContainer onClick={onClickContainer}>
+      <div className="item-container" onClick={onClickContainer}>
         <div className="img-wrapper">
-          <img src={img} alt="영상 불러오기 실패" />
-          <div>{playtime}</div>
+          <img
+            src={`http://img.youtube.com/vi/${video.url}/hqdefault.jpg`}
+            alt="영상 불러오기 실패"
+          />
+          <div>{video.playtime}</div>
         </div>
         <div className="vid-info-wrapper">
           <div className="vid-info-avatar">
-            <img src={avatar} alt={channel} />
+            <img src={video.channel_art} alt={video.channel_name} />
           </div>
           <div className="vid-infos">
-            <p>{title}</p>
-            <p>{channel}</p>
-            <p>{date}</p>
+            <h3>{video.video_title}</h3>
+            <p>{video.channel_name}</p>
+            <p>{video.publish_date}</p>
           </div>
         </div>
-      </MobileContainer>
+      </div>
     </>
   );
 }
-
-const MobileContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 83vw;
-  padding: 12px;
-  margin: 13px 0;
-  font-size: 15px;
-  color: ${(props) => textColor[props.theme].default};
-  background-color: ${(props) => theme[props.theme].default};
-  text-decoration: none;
-  cursor: pointer;
-  word-break: keep-all;
-  border: 2.3px solid var(--title-shadow);
-  border-radius: 4px;
-  &:hover {
-    background-color: ${(props) => theme[props.theme].hover};
-    color: ${(props) => textColor[props.theme].hover};
-    border: 2.3px solid ${(props) => theme[props.theme].hover};
-  }
-`;
-
-const theme = {
-  pink: {
-    default: "var(--white)",
-    hover: "var(--button-default-color-1)",
-  },
-};
-
-const textColor = {
-  pink: {
-    default: "var(--black)",
-    hover: "var(--white)",
-  },
-};
-
-MobileContainer.defaultProps = {
-  theme: "pink",
-  textColor: "pink",
-};
