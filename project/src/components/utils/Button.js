@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export default function Button({
+  type,
   theme,
   text,
   width,
@@ -11,21 +12,38 @@ export default function Button({
   onClick,
 }) {
   return (
-    <StyledButton
-      theme={theme}
-      width={width}
-      height={height}
-      border={border}
-      fontSize={fontSize}
-      margin={margin}
-      onClick={onClick}
-    >
-      <span>{text}</span>
-    </StyledButton>
+    <>
+      {type === "default" && (
+        <DefaultButton
+          theme={theme}
+          width={width}
+          height={height}
+          border={border}
+          fontSize={fontSize}
+          margin={margin}
+          onClick={onClick}
+        >
+          <span>{text}</span>
+        </DefaultButton>
+      )}
+      {type === "floating" && (
+        <FloatingButton
+          theme={theme}
+          width={width}
+          height={height}
+          border={border}
+          fontSize={fontSize}
+          margin={margin}
+          onClick={onClick}
+        >
+          <span>{text}</span>
+        </FloatingButton>
+      )}
+    </>
   );
 }
 
-const StyledButton = styled.button`
+const DefaultButton = styled.button`
   min-width: 220px;
   min-height: 77px;
   width: ${({ width }) => width};
@@ -44,7 +62,30 @@ const StyledButton = styled.button`
     color: ${(props) => textColor[props.theme].hover};
   }
 `;
-
+const FloatingButton = styled.button`
+  min-width: 220px;
+  min-height: 77px;
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
+  color: ${(props) => textColor[props.theme].default};
+  background-color: ${(props) => theme[props.theme].default};
+  border: 2px solid ${(props) => border[props.theme].default};
+  border-radius: 6px;
+  margin-top: ${({ margin }) => margin};
+  margin-bottom: ${({ margin }) => margin};
+  cursor: pointer;
+  font-size: ${({ fontSize }) => fontSize};
+  font-weight: bold;
+  box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);
+  transition: all ease-in-out 300ms;
+  &:hover {
+    background-color: ${(props) => theme[props.theme].hover};
+    color: ${(props) => textColor[props.theme].hover};
+    border: 2px solid ${(props) => border[props.theme].hover};
+    box-shadow: 0px 37px 20px -15px rgba(0,0,0,0.2);
+    transform: translate(0px, -10px);
+  }
+`;
 const theme = {
   pink: {
     default: "var(--button-default-color-1)",
@@ -54,8 +95,11 @@ const theme = {
     default: "var(--button-default-color-2)",
     hover: "var(--button-default-color-1)",
   },
+  white: {
+    default: "var(--white)",
+    hover: "var(--button-default-color-1)",
+  }
 };
-
 const textColor = {
   pink: {
     default: "var(--white)",
@@ -65,9 +109,18 @@ const textColor = {
     default: "var(--black)",
     hover: "var(--white)",
   },
+  white: {
+    default: "var(--black)",
+    hover: "var(--white)",
+  },
 };
-
-StyledButton.defaultProps = {
+const border = {
+  white: {
+    default: "var(--login-box-border)",
+    hover: "var(--button-default-color-1)",
+  }
+}
+DefaultButton.defaultProps = {
   width: "220px",
   height: "77px",
   margin: "5px",

@@ -26,6 +26,7 @@ export default function HomePage() {
           </div>
           <div id="main-btn">
             <Button
+              type="default"
               theme="pink"
               text="추천 받아보기 👋"
               onClick={onClickMainBtn}

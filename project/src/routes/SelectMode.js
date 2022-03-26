@@ -20,22 +20,22 @@ export default function SelectMode() {
           <>
             <FadeIn>
               <Button
-                theme="gray"
+                type="floating"
+                theme="white"
                 text="시청패턴 분석 후 맞춤형으로 추천 받기 🎯"
                 width="500px"
                 height="120px"
-                border="3px solid var(--black)"
                 margin="30px"
                 onClick={onClickRecommendBtn}
               />
             </FadeIn>
             <FadeIn>
               <Button
-                theme="gray"
+                type="floating"
+                theme="white"
                 text="그냥 아무거나 빨리 추천 받기 🎲"
                 width="500px"
                 height="120px"
-                border="3px solid var(--black)"
                 margin="30px"
                 onClick={onClickRandomBtn}
               />
@@ -46,6 +46,7 @@ export default function SelectMode() {
           <>
             <FadeIn>
               <Button
+                type="default"
                 theme="gray"
                 text="시청패턴 분석 후 맞춤형으로 추천 받기"
                 width="320px"
@@ -58,6 +59,7 @@ export default function SelectMode() {
             </FadeIn>
             <FadeIn>
               <Button
+                type="default"
                 theme="gray"
                 text="그냥 아무거나 빨리 추천 받기"
                 width="320px"

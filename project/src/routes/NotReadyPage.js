@@ -9,7 +9,12 @@ const NotReadyPage = ({ msg }) => {
   return (
     <div className="error-msg">
       <h2>{msg}</h2>
-      <Button theme="gray" text="되돌아가기" onClick={onClickMainBtn} />
+      <Button
+        type="default"
+        theme="gray"
+        text="되돌아가기"
+        onClick={onClickMainBtn}
+      />
     </div>
   );
 };
