@@ -10,7 +10,7 @@ const NotReadyPage = ({ msg }) => {
   };
   return (
     <Layout type="simple">
-      <h2>{msg}</h2>
+      <h2 id="error-msg">{msg}</h2>
       <Button
         type="default"
         theme="gray"

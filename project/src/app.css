@@ -1,15 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400&display=swap');
+
+html, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: subpixel-antialiased !important;
+    -webkit-text-size-adjust: none;
     -moz-osx-font-smoothing: grayscale;
-}
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
 }
 
 :root {
@@ -72,6 +86,7 @@ code {
     justify-content: center;
 }
 .header-mode-name h2 {
+    margin-block-start: 0.4em;
     margin-block-end: 0;
 }
 .top-content {
@@ -98,10 +113,10 @@ code {
     }
     .mobile-header-title {
         display: block;
-        transform: scale(0.9);
-        -o-transform: scale(0.9); 
-        -moz-transform: scale(0.9);
-        -webkit-transform: scale(0.9);
+        transform: scale(0.85);
+        -o-transform: scale(0.85); 
+        -moz-transform: scale(0.85);
+        -webkit-transform: scale(0.85);
     }
     .top-content {
         margin: 0;
@@ -183,9 +198,6 @@ code {
     flex-direction: column;
     align-items: center;
     padding: 10px 0;
-}
-.top-content {
-    padding: 14px 0;
 }
 .detail {
     font-family: 'IBM Plex Sans KR', sans-serif;
@@ -311,22 +323,15 @@ code {
     max-height: 100%;
     border-radius: 50%;
 }
-.error-msg {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 50vh;
-}
-.error-msg h2 {
-    margin-block-end: 1em;
+#error-msg {
+    margin-block-end: 0.8em;
 }
 @media (max-width: 768px) {
     .default-body {
         margin-top: -16px;
     }
     .container {
-        padding: 0;
+        padding: 15px;
     }
     .detail {
         font-size: 16px;
@@ -425,14 +430,6 @@ code {
         margin-block-end: 0em;
     }
     .error-msg {
-        width: 100vw;
-        height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .error-msg h2 {
         margin-block-end: 1em;
     }
 }
