@@ -49,44 +49,19 @@ export default function RandomMode() {
         isBrowser &&
         videos.map((v, i) => (
           <FadeIn key={i}>
-            <BrowserContainer url={`https://youtu.be/${v.url}`}>
-              <div className="img-wrapper">
-                <img
-                  src={`http://img.youtube.com/vi/${v.url}/hqdefault.jpg`}
-                  alt="영상 불러오기 실패"
-                />
-                <div>{v.playtime}</div>
-              </div>
-              <div className="vid-infos">
-                <h5>{v.video_title}</h5>
-                <div className="channel-info">
-                  <div className="vid-info-avatar">
-                    <img src={v.channel_art} alt={v.channel_name} />
-                  </div>
-                  <p>{v.channel_name}</p>
-                </div>
-                <p>{v.publish_date}</p>
-              </div>
-            </BrowserContainer>
+            <BrowserContainer video={v} />
           </FadeIn>
         ))}
       {dataExists &&
         isMobile &&
         videos.map((v, i) => (
           <FadeIn key={i}>
-            <MobileContainer
-              url={`https://youtu.be/${v.url}`}
-              img={`http://img.youtube.com/vi/${v.url}/hqdefault.jpg`}
-              title={v.video_title}
-              channel={v.channel_name}
-              avatar={v.channel_art}
-              playtime={v.playtime}
-              date={v.publish_date}
-            />
+            <MobileContainer video={v} />
           </FadeIn>
         ))}
       {dataExists && (
         <Button
+          type="default"
           theme="pink"
           text="새로고침"
           margin="10px"
