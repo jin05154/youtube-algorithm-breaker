@@ -18,7 +18,6 @@ export default function Button({
           theme={theme}
           width={width}
           height={height}
-          border={border}
           fontSize={fontSize}
           margin={margin}
           onClick={onClick}
@@ -39,6 +38,11 @@ export default function Button({
           <span>{text}</span>
         </FloatingButton>
       )}
+      {type === "shadow" && (
+        <ShadowButton onClick={onClick}>
+          <span>{text}</span>
+        </ShadowButton>
+      )}
     </>
   );
 }
@@ -50,7 +54,7 @@ const DefaultButton = styled.button`
   height: ${({ height }) => height};
   color: ${(props) => textColor[props.theme].default};
   background-color: ${(props) => theme[props.theme].default};
-  border: ${({ border }) => border};
+  border: none;
   border-radius: 6px;
   margin-top: ${({ margin }) => margin};
   margin-bottom: ${({ margin }) => margin};
@@ -85,6 +89,19 @@ const FloatingButton = styled.button`
     box-shadow: 0px 37px 20px -15px rgba(0,0,0,0.2);
     transform: translate(0px, -10px);
   }
+`;
+const ShadowButton = styled.button`
+  width: 320px;
+  height: 100px;
+  margin: 30px 0;
+  border: none;
+  border-radius: 27px;
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 19px;
+  font-weight: bold;
+  box-shadow: 0px 3px 4px -2px var(--button-default-color-1);
+  white-space: pre-wrap;
 `;
 const theme = {
   pink: {
