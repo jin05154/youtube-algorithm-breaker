@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { isBrowser, isMobile } from 'react-device-detect';
 import PropTypes from "prop-types";
 
 import Layout from "../components/layouts/Layout";
 import LoginForm from "../components/layouts/LoginForm";
+import NotReadyPage from "./NotReadyPage";
 
 async function LoginUser(credentials) {
   return fetch(`${process.env.REACT_APP_SERVER_API}/user/login`, {
@@ -14,7 +16,7 @@ async function LoginUser(credentials) {
   }).then((data) => data.json());
 }
 
-export default function AdminLogin({ setToken }) {
+export default function AdminLogin({ setToken, msg }) {
   const [inputID, setInputID] = useState("");
   const [inputPW, setInputPW] = useState("");
   const [errMsg, setErrMsg] = useState("");
@@ -36,16 +38,21 @@ export default function AdminLogin({ setToken }) {
   };
 
   return (
-    <Layout type="onlyPC" mode="ADMIN MODE 👷‍♀️">
-      <LoginForm
-        inputID={inputID}
-        inputPW={inputPW}
-        handleID={handleInputID}
-        handlePW={handleInputPW}
-        errMsg={errMsg}
-        onSubmit={onSubmit}
-      />
-    </Layout>
+    <>
+      {isBrowser && (
+        <Layout type="onlyPC" mode="ADMIN MODE 👷‍♀️">
+          <LoginForm
+            inputID={inputID}
+            inputPW={inputPW}
+            handleID={handleInputID}
+            handlePW={handleInputPW}
+            errMsg={errMsg}
+            onSubmit={onSubmit}
+          />
+        </Layout>
+      )}
+      {isMobile && <NotReadyPage msg={msg} />}
+    </>
   );
 }
 

@@ -14,25 +14,29 @@ import Admin from "./routes/AdminPage";
 import useToken from "./hooks/useToken";
 
 function App() {
-
   const { token, setToken } = useToken();
-
-  useEffect(() => {
-    
-  }, [token])
 
   return (
     <Routes>
       <Route path="/" element={<Main />} />
       <Route path="recommend" element={<SelectMode />} />
-      <Route path="recommend/survey" element={<NotReadyPage />} />
+      <Route
+        path="recommend/survey"
+        element={<NotReadyPage msg="페이지 준비중입니다." />}
+      />
       <Route path="recommend/random" element={<RandomMode />} />
-      <Route path="faq" element={<NotReadyPage />} />
-      <Route path="learn-more" element={<NotReadyPage />} />
+      <Route path="faq" element={<NotReadyPage msg="페이지 준비중입니다." />} />
+      <Route
+        path="learn-more"
+        element={<NotReadyPage msg="페이지 준비중입니다." />}
+      />
       <Route
         path="admin"
         element={
-          (!token && <AdminLogin setToken={setToken} />) || (token && <Admin />)
+          (!token && (
+            <AdminLogin setToken={setToken} msg="PC로 접속해주세요." />
+          )) ||
+          (token && <Admin />)
         }
       />
     </Routes>
