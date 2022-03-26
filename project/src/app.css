@@ -310,7 +310,7 @@ code {
     align-items: center;
     height: 50vh;
 }
-.error-msg h1 {
+.error-msg h2 {
     margin-block-end: 1em;
 }
 @media (max-width: 768px) {
@@ -415,6 +415,17 @@ code {
         color: var(--channel-name);
         margin-block-start: 0em;
         margin-block-end: 0em;
+    }
+    .error-msg {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .error-msg h2 {
+        margin-block-end: 1em;
     }
 }
 /* Admin */
