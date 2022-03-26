@@ -27,17 +27,15 @@
 TAB은 유튜브 시청 기록 정보를 수집하여 분석하지 않기 때문에,  
 오히려 보다 더 신선하고 다양한 영상들이 추천될겁니다.  
 '세상에, 이런 꿀잼 채널도 있었다고? 왜 여태 몰랐지?' 싶으실수도?! 🤭
-## 📃 Documentation
 
-### Link
+## 🌐 Product
 [YouTube Algorithm Breaker](https://yt-algorithm-breaker.netlify.app/)
+
+
+## 📃 Documentation
+Backend Repository: [yt-breaker-server](https://github.com/jin05154/yt-breaker-server)
 
 
 ## 🙋‍♀️ Author
 
 [@Yumin Lee](https://www.github.com/jin05154)
-
-
-## 🙏 Acknowledgements
-
- - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
