@@ -8,7 +8,7 @@ import Button from "../components/utils/Button";
 export default function SelectMode() {
   const navigate = useNavigate();
   const onClickRecommendBtn = () => {
-    navigate("/recommend/survey");
+    navigate("/recommend/custom");
   };
   const onClickRandomBtn = () => {
     navigate("/recommend/random");

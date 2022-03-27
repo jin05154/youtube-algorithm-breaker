@@ -161,6 +161,14 @@ body {
     width: 100%;
     padding: 0 0 10px;
 }
+.default-body h2 {
+    margin-block-start: 0.4em;
+    margin-block-end: 0;
+}
+.default-body h3 {
+    margin-block-start: 0.3em;
+    margin-block-end: 0;
+}
 .recommend-body {
     display: flex;
     flex-direction: column;
@@ -329,6 +337,14 @@ body {
 @media (max-width: 768px) {
     .default-body {
         margin-top: -16px;
+    }
+    .default-body h2 {
+        margin-block-start: 0.4em;
+        margin-block-end: 0;
+    }
+    .default-body h3 {
+        margin-block-start: 0.7em;
+        margin-block-end: 0;
     }
     .container {
         padding: 15px;

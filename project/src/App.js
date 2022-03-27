@@ -1,11 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import "./app.css";
 
 /* components */
 import Main from "./routes/HomePage";
-import RandomMode from "./routes/RandomMode";
 import SelectMode from "./routes/SelectMode";
+import RandomMode from "./routes/RandomMode";
+import CustomMode from "./routes/CustomMode";
 import NotReadyPage from "./routes/NotReadyPage";
 import AdminLogin from "./routes/AdminLogin";
 import Admin from "./routes/AdminPage";
@@ -21,7 +22,7 @@ function App() {
       <Route path="/" element={<Main />} />
       <Route path="recommend" element={<SelectMode />} />
       <Route
-        path="recommend/survey"
+        path="recommend/custom"
         element={<NotReadyPage msg="페이지 준비중입니다." />}
       />
       <Route path="recommend/random" element={<RandomMode />} />
