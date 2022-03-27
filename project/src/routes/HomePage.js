@@ -19,7 +19,7 @@ export default function HomePage() {
         </div>
         <div className="detail">
           <p>유튜브 추천영상, 더 이상 재미가 없나요?</p>
-          <p>볼게 없어서 맨날 무한도전 클립만 돌려보고 계신가요?</p>
+          <p>볼게 없어서 이미 봤던거 또 보고 계신가요?</p>
           <div id="last-detail">
             <p>그렇다면 TAB이 직접 엄선하여&nbsp;</p>
             <p>추천해드리는 영상들을 즐겨보세요!</p>
