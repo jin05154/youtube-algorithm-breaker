@@ -8,7 +8,7 @@ export default function Button({
   height,
   border = "none",
   fontSize = "23px",
-  margin,
+  margin = "20px",
   onClick,
 }) {
   return (
@@ -39,7 +39,7 @@ export default function Button({
         </FloatingButton>
       )}
       {type === "shadow" && (
-        <ShadowButton onClick={onClick}>
+        <ShadowButton margin={margin} onClick={onClick}>
           <span>{text}</span>
         </ShadowButton>
       )}
@@ -93,7 +93,8 @@ const FloatingButton = styled.button`
 const ShadowButton = styled.button`
   width: 320px;
   height: 100px;
-  margin: 30px 0;
+  margin-top: ${({ margin }) => margin};
+  margin-bottom: ${({ margin }) => margin};
   border: none;
   border-radius: 27px;
   background-color: var(--white);
