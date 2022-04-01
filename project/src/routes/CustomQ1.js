@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { isBrowser, isMobile } from "react-device-detect";
 
 import FadeIn from "react-fade-in";
@@ -7,6 +8,14 @@ import Button from "../components/utils/Button";
 
 export default function CustomOne() {
   const [pick, setPick] = useState("");
+  const navigate = useNavigate();
+  const onClickChoiceBtn = () => {
+    navigate("/recommend/custom/2");
+  };
+
+  useEffect(() => {
+    if (pick !== "") onClickChoiceBtn();
+  })
 
   return (
     <Layout type="default">
