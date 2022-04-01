@@ -6,7 +6,7 @@ import "./app.css";
 import Main from "./routes/HomePage";
 import SelectMode from "./routes/SelectMode";
 import RandomMode from "./routes/RandomMode";
-import CustomMode from "./routes/CustomMode";
+import CustomOne from "./routes/CustomQ1";
 import NotReadyPage from "./routes/NotReadyPage";
 import AdminLogin from "./routes/AdminLogin";
 import Admin from "./routes/AdminPage";
@@ -21,11 +21,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Main />} />
       <Route path="recommend" element={<SelectMode />} />
-      <Route
-        path="recommend/custom"
-        element={<NotReadyPage msg="페이지 준비중입니다." />}
-      />
       <Route path="recommend/random" element={<RandomMode />} />
+      <Route path="recommend/custom/1" element={<NotReadyPage msg="페이지 준비중입니다." />} />
       <Route path="faq" element={<NotReadyPage msg="페이지 준비중입니다." />} />
       <Route
         path="learn-more"

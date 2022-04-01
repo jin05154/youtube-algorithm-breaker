@@ -1,84 +1,20 @@
-import { useNavigate } from "react-router-dom";
-import { isBrowser, isMobile } from "react-device-detect";
+// import { useEffect, useState } from "react";
 
-import FadeIn from "react-fade-in";
-import Layout from "../components/layouts/Layout";
-import Button from "../components/utils/Button";
+// import CustomOne from "./CustomQ1";
+// import NotReadyPage from "./NotReadyPage";
 
-export default function CustomMode() {
-  const navigate = useNavigate();
-  return (
-    <Layout type="default">
-      {isBrowser && (
-        <>
-          <h3>CUSTOM MODE 🎯</h3>
-          <h2>당신의 성별은?</h2>
-          <FadeIn>
-            <Button
-              type="floating"
-              theme="white"
-              text="🙋‍♂️ 남"
-              width="380px"
-              height="100px"
-            />
-          </FadeIn>
-          <FadeIn>
-            <Button
-              type="floating"
-              theme="white"
-              text="🙋‍♀️ 여"
-              width="380px"
-              height="100px"
-            />
-          </FadeIn>
-          <FadeIn>
-            <Button
-              type="floating"
-              theme="white"
-              text="🌈 기타"
-              width="380px"
-              height="100px"
-              margin="30px"
-            />
-          </FadeIn>
-        </>
-      )}
-      {isMobile && (
-        <>
-          <h3>CUSTOM MODE 🎯</h3>
-          <h2>당신의 성별은?</h2>
-          <FadeIn>
-            <Button
-              type="shadow"
-              theme="white"
-              text="🙋‍♂️ 남"
-              width="380px"
-              height="100px"
-              margin="10px"
-            />
-          </FadeIn>
-          <FadeIn>
-            <Button
-              type="shadow"
-              theme="white"
-              text="🙋‍♀️ 여"
-              width="380px"
-              height="100px"
-              margin="10px"
-            />
-          </FadeIn>
-          <FadeIn>
-            <Button
-              type="shadow"
-              theme="white"
-              text="🌈 기타"
-              width="380px"
-              height="100px"
-              margin="10px"
-            />
-          </FadeIn>
-        </>
-      )}
-    </Layout>
-  );
-}
+// export default function CustomMode() {
+//   const [cOne, setOne] = useState("");
+
+//   useEffect(() => {
+//     console.log(cOne);
+//   }, [cOne])
+//   return (
+//     <>
+//       {cOne === "" && <CustomOne setChoice={setOne} />}
+//       {cOne === "male" && (
+//         <NotReadyPage msg="페이지 준비중입니다." />
+//       )}
+//     </>
+//   );
+// }
