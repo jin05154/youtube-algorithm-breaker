@@ -177,7 +177,7 @@ body {
     margin-block-end: 0;
 }
 .recommend-body {
-    display: inherit;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
