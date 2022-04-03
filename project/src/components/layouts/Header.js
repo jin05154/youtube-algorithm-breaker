@@ -20,7 +20,7 @@ export default function Header({ mode }) {
         </div>
       </div>
       <div className="header-mode-name">
-        <h2>{mode}</h2>
+        <h3>{mode}</h3>
       </div>
     </>
   );

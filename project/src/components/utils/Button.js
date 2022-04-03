@@ -48,8 +48,8 @@ export default function Button({
 }
 
 const DefaultButton = styled.button`
-  min-width: 220px;
-  min-height: 77px;
+  min-width: 100px;
+  min-height: 20px;
   width: ${({ width }) => width};
   height: ${({ height }) => height};
   color: ${(props) => textColor[props.theme].default};

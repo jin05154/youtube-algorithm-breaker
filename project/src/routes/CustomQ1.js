@@ -7,22 +7,20 @@ import Layout from "../components/layouts/Layout";
 import Button from "../components/utils/Button";
 
 export default function CustomOne() {
-  const [pick, setPick] = useState("");
   const navigate = useNavigate();
+  const [pick, setPick] = useState("");
   const onClickChoiceBtn = () => {
     navigate("/recommend/custom/2");
   };
 
   useEffect(() => {
     if (pick !== "") onClickChoiceBtn();
-  })
+  });
 
   return (
-    <Layout type="default">
+    <Layout type="question" mode="CUSTOM MODE 🎯" question="당신의 성별은?">
       {isBrowser && (
         <>
-          <h3>CUSTOM MODE 🎯</h3>
-          <h2>당신의 성별은?</h2>
           <FadeIn>
             <Button
               type="floating"
@@ -58,8 +56,6 @@ export default function CustomOne() {
       )}
       {isMobile && (
         <>
-          <h3>CUSTOM MODE 🎯</h3>
-          <h2>당신의 성별은?</h2>
           <FadeIn>
             <Button
               type="shadow"

@@ -4,7 +4,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import { ReactComponent as Title } from "../../images/title.svg";
 
-export default function Layout({ children, type, mode }) {
+export default function Layout({ children, type, mode, question }) {
   const history = useNavigate();
   const onClickLogo = () => history("/");
   return (
@@ -20,6 +20,16 @@ export default function Layout({ children, type, mode }) {
         <>
           <Header mode={mode} />
           <div className="recommend-body">{children}</div>
+          <Footer />
+        </>
+      )}
+      {type === "question" && (
+        <>
+          <Header mode={mode} />
+          <div className="question-wrapper">
+            <h2>{question}</h2>
+            <div className="question-body">{children}</div>
+          </div>
           <Footer />
         </>
       )}
