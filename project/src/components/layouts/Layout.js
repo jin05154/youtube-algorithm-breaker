@@ -43,10 +43,10 @@ export default function Layout({ children, type, mode, question }) {
       {type === "onlyPC" && (
         <div className="pc-layout">
           <div className="pc-only-header">
-          <div className="header-title">
+            <div className="header-title">
               <Title onClick={onClickLogo} />
             </div>
-            <h2>{mode}</h2>
+            <h3>{mode}</h3>
           </div>
           <div className="pc-body">{children}</div>
         </div>

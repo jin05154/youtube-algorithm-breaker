@@ -76,9 +76,11 @@ body {
     justify-content: center;
     align-items: center;
     min-width: 1440px;
-    height: 20vh;
+    height: 21vh;
 }
-.pc-only-header h2 {
+.pc-only-header h3 {
+    color: var(--channel-name);
+    margin-block-start: 0.6em;
     margin-block-end: 0;
 }
 .header-mode-name {

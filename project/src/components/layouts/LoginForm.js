@@ -69,6 +69,9 @@ const Greetings = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   width: 330px;
+  h1 {
+    margin-block-start: 1em;
+  }
 `;
 const ErrorMessage = styled.p`
   margin-block-start: 0.7em;
@@ -80,6 +83,7 @@ const LoginButton = styled.button`
   align-items: center;
   width: 330px;
   height: 50px;
+  margin: 15px 0 0 0;
   border: none;
   border-radius: 5px;
   background: var(--button-default-color-1);

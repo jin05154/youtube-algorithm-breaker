@@ -40,12 +40,12 @@ export default function FormInputItem({ type, inputInfo, handleInfo }) {
 const IdWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  margin: 0 0 23px 0;
+  margin: 0 0 18px 0;
 `;
 const PwWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  margin: 0 0 5px 0;
+  margin: 0 0 12px 0;
 `;
 const StyledBox = styled.div`
   display: flex;
