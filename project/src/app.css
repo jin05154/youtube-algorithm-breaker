@@ -336,12 +336,16 @@ body {
     margin-block-end: 0em;
 }
 .vid-infos p:nth-child(3) {
-    font-size: 17px;
+    font-size: 15px;
 }
 .channel-info {
     display: flex;
     flex-direction: row;
     padding: 0 0 6px 0;
+}
+.channel-info p {
+    margin-block-start: 0.1em;
+    margin-block-end: 0.1em;
 }
 .vid-info-avatar {
     max-width: 26px;

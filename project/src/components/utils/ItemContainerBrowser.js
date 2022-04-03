@@ -18,7 +18,7 @@ export default function ItemContainerBrowser({ video }) {
           </div>
           <p>{video.channel_name}</p>
         </div>
-        <p>{video.publish_date}</p>
+        <p>조회수 {video.view_count}회  &nbsp;•&nbsp; {video.publish_date}</p>
       </div>
     </div>
   );

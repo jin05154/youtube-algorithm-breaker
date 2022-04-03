@@ -17,7 +17,7 @@ export default function ItemContainerMobile({ video }) {
         <div className="vid-infos">
           <h3>{video.video_title}</h3>
           <p>{video.channel_name}</p>
-          <p>{video.publish_date}</p>
+          <p>조회수 {video.view_count}회  &nbsp;•&nbsp; {video.publish_date}</p>
         </div>
       </div>
     </div>
