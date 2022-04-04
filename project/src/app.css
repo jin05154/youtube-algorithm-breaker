@@ -74,7 +74,7 @@ body {
 .pc-only-header {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     min-width: 1440px;
     height: 16vh;
