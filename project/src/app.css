@@ -74,10 +74,11 @@ body {
 .pc-only-header {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     min-width: 1440px;
-    height: 21vh;
+    height: 16vh;
+    padding-bottom: 24px;
 }
 .pc-only-header h3 {
     color: var(--channel-name);

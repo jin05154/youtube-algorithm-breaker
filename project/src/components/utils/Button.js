@@ -48,7 +48,7 @@ export default function Button({
 }
 
 const DefaultButton = styled.button`
-  min-width: 100px;
+  min-width: 60px;
   min-height: 20px;
   width: ${({ width }) => width};
   height: ${({ height }) => height};
@@ -56,11 +56,13 @@ const DefaultButton = styled.button`
   background-color: ${(props) => theme[props.theme].default};
   border: none;
   border-radius: 6px;
+  padding: 5px;
   margin-top: ${({ margin }) => margin};
   margin-bottom: ${({ margin }) => margin};
   cursor: pointer;
   font-size: ${({ fontSize }) => fontSize};
   font-weight: bold;
+  letter-spacing: 1px;
   &:hover {
     background-color: ${(props) => theme[props.theme].hover};
     color: ${(props) => textColor[props.theme].hover};
