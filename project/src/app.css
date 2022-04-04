@@ -229,13 +229,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-.pc-layout-black {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.65);
-}
 .container {
     display: flex;
     flex-direction: column;
@@ -244,7 +237,7 @@ body {
 }
 .detail {
     font-family: 'IBM Plex Sans KR', sans-serif;
-    font-size: calc(17px + 0.3vw);
+    font-size: calc(17px + 0.2vw);
     display: inherit;
     flex-direction: column;
     align-items: center;
@@ -259,7 +252,7 @@ body {
     display: inline-flex;
 }
 #main-btn {
-    margin: 29px 0 0;
+    margin: 14px 0 0;
 }
 #select-mode {
     display: inherit;
