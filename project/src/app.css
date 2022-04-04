@@ -38,6 +38,7 @@ body {
     --button-default-color-1: #EA1D5D;
     --button-hover-color-1: #ad1457;
     --button-default-color-2: #EFEFEF;
+    --button-hover-color-2: #959595;
     --channel-name: #606060;
     --intro-message: #838383;
 }
@@ -228,6 +229,13 @@ body {
     align-items: center;
     justify-content: center;
 }
+.pc-layout-black {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.65);
+}
 .container {
     display: flex;
     flex-direction: column;
@@ -261,6 +269,7 @@ body {
 #list-mode {
     display: inherit;
     min-height: 60vh;
+    width: 1250px;
     padding: 10px 0 0;
     border-bottom: 2px solid var(--black);
 }

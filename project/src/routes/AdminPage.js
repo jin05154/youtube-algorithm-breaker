@@ -4,7 +4,7 @@ import axios from "axios";
 import PulseLoader from "react-spinners/PulseLoader";
 import Layout from "../components/layouts/Layout";
 import ToolBar from "../components/utils/AdminToolBar";
-import ListRow from "../components/utils/VideoListRow";
+import ListRow from "../components/utils/AdminVideoListRow";
 
 export default function AdminPage() {
   const [loading, setLoading] = useState(true);

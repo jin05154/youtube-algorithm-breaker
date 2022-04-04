@@ -115,6 +115,10 @@ const theme = {
     default: "var(--button-default-color-2)",
     hover: "var(--button-default-color-1)",
   },
+  darkGray: {
+    default: "var(--button-default-color-2)",
+    hover: "var(--button-hover-color-2)",
+  },
   white: {
     default: "var(--white)",
     hover: "var(--button-default-color-1)",
@@ -126,6 +130,10 @@ const textColor = {
     hover: "var(--white)",
   },
   gray: {
+    default: "var(--black)",
+    hover: "var(--white)",
+  },
+  darkGray: {
     default: "var(--black)",
     hover: "var(--white)",
   },
