@@ -9,29 +9,43 @@ import Button from "../components/utils/Button";
 export default function CustomTwo() {
   const navigate = useNavigate();
   const [age, setAge] = useState("");
+  const [errExists, setErrExists] = useState(false);
   const handleAgeInput = (e) => {
     setAge(e.target.value);
   };
   const onClickBtn = () => {
     console.log(age);
-    navigate("/recommend/custom/3");
+    if (age !== "" && age > 0 && age < 120) {
+      setErrExists(false);
+      navigate("/recommend/custom/3");
+    } else {
+      setErrExists(true);
+    }
   };
-  // TODO: 나이 입력 blank 예외처리, 입력 가능한 나이 범위 표시하기
+  
   return (
-    <Layout type="question" mode="CUSTOM MODE 🎯" question="당신의 나이는?">
+    <Layout
+      type="question"
+      mode="CUSTOM MODE 🎯"
+      question="당신의 나이는?"
+      addition="(서비스 이용 권장 나이는 14세 ~ 39세입니다.)"
+    >
       <FadeIn>
         <div className="basic-wrap">
           <StyledInput>
             <InputForm
               type="number"
-              min={10}
-              max={39}
+              min={14}
+              max={120}
               onChange={handleAgeInput}
             />
             <InputUnit>
               <h3>세</h3>
             </InputUnit>
           </StyledInput>
+          {errExists && (
+            <ErrorMessage>나이를 정확히 입력해주세요.</ErrorMessage>
+          )}
           <Button
             type="default"
             text="다음"
@@ -66,4 +80,8 @@ const InputForm = styled.input`
 `;
 const InputUnit = styled.div`
   padding: 10px;
+`;
+const ErrorMessage = styled.p`
+  margin-block-start: 0.7em;
+  color: red;
 `;
