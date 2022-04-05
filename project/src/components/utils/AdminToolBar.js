@@ -45,7 +45,7 @@ const ToolBar = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  min-width: 1250px;
+  min-width: 1600px;
 `;
 const BarRight = styled.div`
   display: flex;
